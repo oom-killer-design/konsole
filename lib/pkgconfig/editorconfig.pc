@@ -1,0 +1,9 @@
+prefix=C:/CraftRoot
+libdir=${prefix}/lib
+includedir=${prefix}/include
+ 
+Name: editorconfig
+Description: Library handling EditorConfig files, a file format defining coding styles in projects.
+Version: 0.12.5
+Libs: -L${libdir} -leditorconfig
+Cflags: -I${includedir}

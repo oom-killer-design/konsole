@@ -1,0 +1,196 @@
+'\" t
+.\"     Title: qt5options
+.\"    Author: Lauri Watts <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2016-06-04
+.\"    Manual: Qt Command Line Documentation
+.\"    Source: KDE Frameworks Qt 5.4
+.\"  Language: English
+.\"
+.TH "QT5OPTIONS" "7" "2016\-06\-04" "KDE Frameworks Qt 5.4" "Qt Command Line Documentation"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+qt5options \- Common commandline options for all applications based on the Qt(TM) toolkit
+.SH "SYNOPSIS"
+.HP \w'\fB\fIQt\ application\fR\fR\ 'u
+\fB\fIQt application\fR\fR [\fB\-style=\fR\ \fIstyle\fR\ /\ \fB\-style\fR\ \fIstyle\fR] [\fB\-stylesheet=\fR\ \fIstylesheet\fR\ /\ \fB\-stylesheet\fR\ \fIstylesheet\fR] [\fB\-widgetcount\fR] [\fB\-reverse\fR] [\fB\-qmljsdebugger=\fR\ \fIport\fR] [\fB\-platform\fR\ \fIplatformName[:options]\fR] [\fB\-platformpluginpath\fR\ \fIpath\fR] [\fB\-platformtheme\fR\ \fIplatformTheme\fR] [\fB\-plugin\fR\ \fIplugin\fR] [\fB\-qwindowgeometry\fR\ \fIgeometry\fR] [\fB\-qwindowicon\fR\ \fIicon\fR] [\fB\-qwindowtitle\fR\ \fItitle\fR] [\fB\-reverse\fR] [\fB\-session\fR\ \fIsession\fR] [\fB\-display\fR\ \fIhostname:screen_number\fR] [\fB\-geometry\fR\ \fIgeometry\fR] [\fB\-dialogs=\fR\ \fI[xp|none]\fR] [\fB\-fontengine=\fR\ \fIfreetype\fR] [\fB\-h,\ \-\-help\ and\ \-?\ on\ \fR\fBWindows\(rg\fR] [\fB\-v\ \-\-version\fR]
+.SH "OPTIONS"
+.PP
+The following options apply to all
+Qt(TM)
+applications:
+.PP
+\fB\-style=\fR \fIstyle\fR / \fB\-style\fR \fIstyle\fR
+.RS 4
+Set the application
+GUI
+style\&. Possible values depend on the system configuration\&. If
+Qt(TM)
+is compiled with additional styles or has additional styles as plugins these will be available to the
+\fB\-style\fR
+command line option\&.
+.RE
+.PP
+\fB\-stylesheet=\fR \fIstylesheet\fR / \fB\-stylesheet\fR \fIstylesheet\fR
+.RS 4
+Set the application styleSheet\&. The value must be a path to a file that contains the Style Sheet\&.
+.RE
+.PP
+\fB\-widgetcount\fR
+.RS 4
+Print debug message at the end about number of widgets left undestroyed and maximum number of widgets existed at the same time\&.
+.RE
+.PP
+\fB\-reverse\fR
+.RS 4
+Set the application\*(Aqs layout direction to
+Qt::RightToLeft\&. This option is intended to aid debugging and should not be used in production\&. The default value is automatically detected from the user\*(Aqs locale (see also
+QLocale::textDirection())\&.
+.RE
+.PP
+\fB\-qmljsdebugger=\fR \fIport\fR
+.RS 4
+Activate the QML/JS debugger with a specified port\&. The value must be of format port:1234[,block], where block is optional and will make the application wait until a debugger connects to it\&.
+.RE
+.PP
+\fB\-platform\fR \fIplatformName[:options]\fR
+.RS 4
+Specify the
+Qt(TM)
+Platform Abstraction (QPA) plugin\&.
+.RE
+.PP
+\fB\-platformpluginpath\fR \fIpath\fR
+.RS 4
+Specify the path to platform plugins\&.
+.RE
+.PP
+\fB\-platformtheme\fR \fIplatformTheme\fR
+.RS 4
+Specify the platform theme\&.
+.RE
+.PP
+\fB\-plugin\fR \fIplugin\fR
+.RS 4
+Specify additional plugins to load\&. The argument may appear multiple times\&.
+.RE
+.PP
+\fB\-qwindowgeometry\fR \fIgeometry\fR
+.RS 4
+Specify the window geometry for the main window using the
+X11\-syntax\&. For example: \-qwindowgeometry 100x100+50+50
+.RE
+.PP
+\fB\-qwindowicon\fR \fIicon\fR
+.RS 4
+Set the default window icon\&.
+.RE
+.PP
+\fB\-qwindowtitle\fR \fItitle\fR
+.RS 4
+Set the title of the first window\&.
+.RE
+.PP
+\fB\-session\fR \fIsession\fR
+.RS 4
+Restore the application from an earlier session\&.
+.RE
+.PP
+\fB\-display\fR \fIhostname:screen_number\fR
+.RS 4
+Switch displays on
+X11\&. Overrides the
+\fBDISPLAY\fR
+environment variable\&.
+.RE
+.PP
+\fB\-geometry\fR \fIgeometry\fR
+.RS 4
+Specify the window geometry for the main window on
+X11\&. For example: \-geometry 100x100+50+50
+.RE
+.PP
+\fB\-dialogs=\fR \fI[xp|none]\fR
+.RS 4
+Only available for the
+Windows\(rg
+platform\&. XP uses native style dialogs and none disables them\&.
+.RE
+.PP
+\fB\-fontengine=\fR \fIfreetype\fR
+.RS 4
+Use the FreeType font engine\&.
+.RE
+.PP
+\fB\-h, \-\-help and \-? on \fR\fBWindows\(rg\fR
+.RS 4
+Print all options and the application description\&.
+.RE
+.PP
+\fB\-v \-\-version\fR
+.RS 4
+Display the version string of the application\&.
+.RE
+.SH "SEE ALSO"
+.PP
+\fIkf5options\fR(7)
+.SH "AUTHORS"
+.PP
+Man page originally written by
+Lauri Watts<lauri@kde\&.org>
+.PP
+Updated to
+Frameworks
+5 by
+Burkhard Lück<lueck@hube\-lueck\&.de>
+.PP
+The infos for this man page are from
+\m[blue]\fBQApplication documentation\fR\m[]\&\s-2\u[1]\d\s+2,
+\m[blue]\fBQGuiApplication documentation\fR\m[]\&\s-2\u[2]\d\s+2
+and
+\m[blue]\fBQCommandLineParser documentation\fR\m[]\&\s-2\u[3]\d\s+2\&.
+.SH "AUTHORS"
+.PP
+\fBLauri Watts\fR <\&lauri@kde\&.org\&>
+.RS 4
+Author.
+.RE
+.PP
+\fBBurkhard Lück\fR <\&lueck@hube\-lueck\&.de\&>
+.RS 4
+Author.
+.RE
+.SH "NOTES"
+.IP " 1." 4
+QApplication documentation
+.RS 4
+\%https://doc.qt.io/qt-5/qapplication.html#QApplication
+.RE
+.IP " 2." 4
+QGuiApplication documentation
+.RS 4
+\%https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication
+.RE
+.IP " 3." 4
+QCommandLineParser documentation
+.RS 4
+\%https://doc.qt.io/qt-5/qcommandlineparser.html
+.RE

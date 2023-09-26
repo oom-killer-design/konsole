@@ -1,0 +1,13 @@
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libarchive
+Description: library that can create and read several streaming archive formats
+Version: 3.6.2
+Cflags: -I${includedir}
+Cflags.private: -DLIBARCHIVE_STATIC
+Libs: -L${libdir} -larchive
+Libs.private:  -lz -lbz2 -llzma -lzstd -lcrypto -liconv -lxml2 -lpcreposix -lssl -LC:/CraftRoot/lib -lxml2 -lz -llzma -liconv -licudt -licuin -licuuc -lws2_32
+Requires.private: 

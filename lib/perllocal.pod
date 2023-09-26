@@ -1,0 +1,22 @@
+=head2 Thu Sep 21 17:39:36 2023: C<Module> L<URI|URI>
+
+=over 4
+
+=item *
+
+C<installed into: \builds\craft\windows-mingw_64-gcc\site\lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 1.76>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

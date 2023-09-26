@@ -1,0 +1,142 @@
+'\" t
+.\"     Title: \fBkbuildsycoca5\fR
+.\"    Author: Darian Lanx <content@openprojects.net>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2015-09-17
+.\"    Manual: Plataformas do KDE: KService
+.\"    Source: Plataformas do KDE Plataformas 5.15
+.\"  Language: Portuguese
+.\"
+.TH "\FBKBUILDSYCOCA5\FR" "8" "2015\-09\-17" "Plataformas do KDE Plataformas" "Plataformas do KDE: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOME"
+kbuildsycoca5 \- Reconstr\('oi a \*(Aqcache\*(Aq de configura\(,c\(~oes do sistema dos ficheiros \*(Aqdesktop\*(Aq do KService\&.
+.SH "SINTAXE"
+.HP \w'\fBkbuildsycoca5\fR\ 'u
+\fBkbuildsycoca5\fR [\fIOP\(,C\(~OES\fR...]
+.SH "DESCRI\(,c\(~aO"
+.PP
+O
+\fBkbuildsyscoca5\fR, como parte das ferramentas da linha de comandos do
+KDE, garante o funcionamento correcto do
+KDE
+ao ler todos os ficheiros
+\&.desktop,
+\&.xml
+e
+\&.protocol
+para construir uma base de dados bin\('aria\&.
+.PP
+A biblioteca KService usa esta base de dados para oferecer de forma eficiente a informa\(,c\(~ao pedida a ela\&.
+.PP
+Os utilizadores n\(~ao ter\(~ao normalmente de executar esta aplica\(,c\(~ao directamente; o KService execut\('a\-lo\-\('a, se necess\('ario, sempre que algum dos ficheiros cujos dados estejam em \*(Aqcache\*(Aq seja alterado\&.
+.SH "OP\(,c\(~oES"
+.PP
+\fB\-\-global\fR
+.RS 4
+Ignora todos os ficheiros definidos pelo utilizador (em
+\fIXDG_DATA_HOME\fR)\&. Isto s\('o \('e suportado de momento nos sistemas Unix\&.
+.RE
+.PP
+\fB\-\-noincremental\fR
+.RS 4
+Em vez de usar a \*(Aqcache\*(Aq existente e actualizar apenas a informa\(,c\(~ao que tiver sido alterada ou adicionada, come\(,ca com uma \*(Aqcache\*(Aq em branco\&. \('E ignorada se a op\(,c\(~ao
+\fB\-\-global\fR
+estiver activa\&.
+.RE
+.PP
+\fB\-\-nosignal\fR
+.RS 4
+Normalmente, o
+\fBkbuildsyscoca5\fR
+envia um sinal por D\-Bus assim que a \*(Aqcache\*(Aq tiver sido actualizada para todas as aplica\(,c\(~oes que usem o KService, de modo que estejam sempre a trabalhar com a \('ultima informa\(,c\(~ao\&. Esta op\(,c\(~ao suprime esse comportamento\&.
+.RE
+.PP
+\fB\-\-menutest\fR
+.RS 4
+Testa a gera\(,c\(~ao da base de dados do menu da aplica\(,c\(~ao\&. N\(~ao constr\('oi realmente a \*(Aqcache\*(Aq\&.
+.RE
+.PP
+\fB\-\-testmode\fR
+.RS 4
+Usa o "modo de testes" do QStandardPaths para evitar interferir com os dados do utilizador\&. Isto pretende ser usado nos testes unit\('arios\&.
+.RE
+.PP
+\fB\-\-track \fR\fB\fIid\-menu\fR\fR
+.RS 4
+Seguir um ID do menu para depura\(,c\(~ao\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Mostra informa\(,c\(~oes sobre o autor\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Mostra informa\(,c\(~oes acerca da licen\(,ca\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Mostra um breve texto de ajuda\&.
+.RE
+.PP
+\fB\-v , \-\-version\fR
+.RS 4
+Mostra a informa\(,c\(~ao da vers\(~ao\&.
+.RE
+.SH "FICHEIROS"
+.PP
+\fIcachedir\fR/ksycoca5_[l\('ingua]_[sha1\-das\-pastas]
+.RS 4
+A \*(Aqcache\*(Aq do KService que \('e gerada pelo
+\fBkbuildsycoca5\fR\&. Nos sistemas Unix, a
+\fIcachedir\fR
+normalmente \('e a
+\fBXDG_CONFIG_HOME\fR
+.RE
+.SH "VEJA TAMB\('eM"
+.PP
+\fBkded5\fR(8),
+\fBkdeinit5\fR(8)
+.SH "PROBLEMAS"
+.PP
+Existem provavelmente diversos erros\&. Use o
+\m[blue]\fBsistema de gest\(~ao de erros do KDE\fR\m[]\&\s-2\u[1]\d\s+2
+para os comunicar\&.
+.SH "AUTORES"
+.PP
+\fBDarian Lanx\fR <\&content@openprojects\&.net\&>
+.RS 4
+Criador da documenta\(,c\(~ao original\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Actualizou a documenta\(,c\(~ao para as Plataformas 5 do KDE\&.
+.RE
+.SH "NOTAS"
+.IP " 1." 4
+sistema de gest\(~ao de erros do KDE
+.RS 4
+\%http://bugs.kde.org
+.RE

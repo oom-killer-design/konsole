@@ -1,0 +1,138 @@
+'\" t
+.\"     Title: \fBdesktoptojson\fR
+.\"    Author: Scarlett Clark <scarlett@scarlettgatelyclark.com>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2014-04-02
+.\"    Manual: KDE Frameworks: KService
+.\"    Source: KDE Frameworks Frameworks 5.0
+.\"  Language: Italian
+.\"
+.TH "\FBDESKTOPTOJSON\FR" "8" "2014\-04\-02" "KDE Frameworks Frameworks 5.0" "KDE Frameworks: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOME"
+desktoptojson \- Converte un file \&.desktop in un file \&.json\&.
+.SH "SINTASSI"
+.HP \w'\fBdesktoptojson\fR\ 'u
+\fBdesktoptojson\fR \-\-input\ \fIFILE\-DESKTOP\fR \-\-output\ \fIFILE\-JSON\fR
+.HP \w'\fBdesktoptojson\fR\ 'u
+\fBdesktoptojson\fR {\-\-version | \-\-help}
+.SH "DESCRIZIONE"
+.PP
+Il framework KService usa informazioni contenute nei file
+\&.desktop
+per localizzare i servizi, incluse le estensioni per applicazioni e librerie basate su Qt5\&. Il sistema delle estensioni di Qt5, tuttavia, usa dati
+JSON
+integrati nelle stesse estensioni\&.
+\fBdesktoptojson\fR
+permette che le informazioni contenute in un file
+\&.desktop
+siano usate anche come i dati integrati in un\*(Aqestensione Qt5 convertendo le voci del file
+\&.desktop
+in dati
+JSON\&.
+.PP
+I dati
+JSON
+generati costituiscono un oggetto
+JSON
+che mappa le voci dal gruppo
+[Desktop Entry]
+del file
+\&.desktop\&. Tutti gli altri gruppi sono ignorati\&. La maggior parte delle voci sono semplicemente convertite in stringhe
+JSON, ma alcune di esse (come
+Hidden
+e
+X\-KDE\-PluginInfo\-EnabledByDefault) sono notoriamente valori booleani e quindi viene usato tale tipo; analogamente altre voci (come
+X\-KDE\-ServiceTypes
+e
+X\-KDE\-PluginInfo\-Depends) sono sempre convertite in vettori di stringhe\&.
+.SH "OPZIONI"
+.PP
+\fB\-\-input \fR\fB\fIFILE\-DESKTOP\fR\fR
+.RS 4
+Il file
+\&.desktop
+da convertire\&.
+.RE
+.PP
+\fB\-\-output \fR\fB\fIFILE\-JSON\fR\fR
+.RS 4
+Il file in cui scrivere i dati
+JSON
+generati\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Mostra un breve testo di aiuto\&.
+.RE
+.PP
+\fB\-\-version\fR
+.RS 4
+Mostra le informazioni sulla versione\&.
+.RE
+.SH "USO"
+.PP
+Buona parte degli utenti di questo strumento useranno la macro di
+CMake\fBkservice_desktop_to_json\fR
+come parte del processo di generazione di un\*(Aqestensione\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+
+add_library(myplugin MODULE ${myplugin_SRCS})
+kservice_desktop_to_json(myplugin myplugin\&.desktop)
+
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Questo produrr\(`a il file
+JSONmyplugin\&.json
+a cui si pu\(`o fare riferimento dalle macro
+\fBK_PLUGIN_FACTORY_WITH_JSON\fR
+o
+\fBQ_PLUGIN_METADATA\fR\&.
+.SH "ERRORI"
+.PP
+Usa
+\m[blue]\fBil sito di gestione dei bug di KDE\fR\m[]\&\s-2\u[1]\d\s+2
+per segnalarli\&.
+.SH "AUTORI"
+.PP
+\fBScarlett Clark\fR <\&scarlett@scarlettgatelyclark\&.com\&>
+.RS 4
+Ha scritto la documentazione originale\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Modifiche alla documentazione\&.
+.RE
+.SH "NOTE"
+.IP " 1." 4
+il sito di gestione dei bug di KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

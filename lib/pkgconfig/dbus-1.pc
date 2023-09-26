@@ -1,0 +1,21 @@
+original_prefix=C:/CraftRoot
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+bindir=${prefix}/bin
+libdir=${prefix}/lib
+includedir=${prefix}/include
+system_bus_default_address=autolaunch:scope=*install-path
+datarootdir=${prefix}/bin/data
+datadir=${prefix}/bin/data
+sysconfdir=${prefix}/etc
+session_bus_services_dir=${datadir}/dbus-1/services
+system_bus_services_dir=${datadir}/dbus-1/system-services
+interfaces_dir=${datadir}/dbus-1/interfaces
+daemondir=${prefix}/bin
+
+Name: dbus
+Description: Free desktop message bus
+Version: 1.14.8
+Libs: -L${libdir} -ldbus-1
+Libs.private:  -lmingw32 -lgcc -lmoldname -lmingwex -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lmoldname -lmingwex -lkernel32 -lpthread -lLIBRT-NOTFOUND
+Cflags: -I${includedir}/dbus-1.0 -I${libdir}/dbus-1.0/include 

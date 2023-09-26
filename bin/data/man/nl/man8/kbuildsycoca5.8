@@ -1,0 +1,141 @@
+'\" t
+.\"     Title: \fBkbuildsycoca5\fR
+.\"    Author: Darian Lanx <content@openprojects.net>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2015-09-17
+.\"    Manual: KDE Frameworks: KService
+.\"    Source: KDE Frameworks Frameworks 5.15
+.\"  Language: Dutch
+.\"
+.TH "\FBKBUILDSYCOCA5\FR" "8" "2015\-09\-17" "KDE Frameworks Frameworks 5.15" "KDE Frameworks: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+kbuildsycoca5 \- Bouwt opnieuw de systeemconfiguratiecache van de desktop\-bestanden van KService
+.SH "SAMENVATTING"
+.HP \w'\fBkbuildsycoca5\fR\ 'u
+\fBkbuildsycoca5\fR [\fIOPTIES\fR...]
+.SH "BESCHRIJVING"
+.PP
+\fBkbuildsycoca5\fR
+bouwt de binaire cache van de gegevens opgeslagen in
+\&.desktop
+en
+MIME\-type
+\&.xml\-bestanden die het KService\-framework gebruikt om plug\-ins, toepassingen en andere services te vinden\&.
+.PP
+De KService\-bibliotheek gebruikt deze database om efficient de gevraagde informatie ervan te leveren\&.
+.PP
+Gebruikers hoeven normaal deze toepassing niet direct te gebruiken; KService zal het, indien nodig, uitvoeren wanneer een van de bestanden waarvan de gegevens in de cache staat is gewijzigd\&.
+.SH "OPTIES"
+.PP
+\fB\-\-global\fR
+.RS 4
+Negeert elk door de gebruiker ingesteld bestand (in
+\fIXDG_DATA_HOME\fR)\&. Dit wordt nu alleen ondersteunt in
+UNIX\(rg\-systemen\&.
+.RE
+.PP
+\fB\-\-noincremental\fR
+.RS 4
+Anders dan de bestaande cache gebruiken en alleen de informatie bijwerken als die is gewijzigd of er is iets toegevoegd, wordt gestart met een lege cache\&. Wordt genegeerd als
+\fB\-\-global\fR
+is ingesteld\&.
+.RE
+.PP
+\fB\-\-nosignal\fR
+.RS 4
+Gewoonlijk stuurt
+\fBkbuildsycoca5\fR
+een signaal over de
+D\-Bus, nadat de cache is bijgewerkt, naar alle toepassingen die KService gebruiken zodat ze altijd werken met de laatste informatie\&. Deze optie onderdrukt dat gedrag\&.
+.RE
+.PP
+\fB\-\-menutest\fR
+.RS 4
+Test de generatie van de menu\-database voor toepassingen\&. Bouwt niet echt de cache\&.
+.RE
+.PP
+\fB\-\-testmode\fR
+.RS 4
+Gebruik de "testmodus" QStandardPaths om interferentie met gebruikersgegevens te vermijden\&. Dit is bedoeld voor gebruik met tests van eenheden\&.
+.RE
+.PP
+\fB\-\-track \fR\fB\fImenu\-id\fR\fR
+.RS 4
+Track een menu\-id voor debuggen\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Auteurinformatie tonen\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Licentie\-informatie tonen\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Een korte helptekst tonen\&.
+.RE
+.PP
+\fB\-v , \-\-version\fR
+.RS 4
+Versie\-informatie tonen
+.RE
+.SH "BESTANDEN"
+.PP
+\fIcachedir\fR/ksycoca5_[taal]_[sha1\-van\-mappen]
+.RS 4
+De KService cache gegenereerd door
+\fBkbuildsycoca5\fR\&. Op
+UNIX\(rg\-systemen is
+\fIcachedir\fR
+typisch
+\fBXDG_CACHE_HOME\fR
+.RE
+.SH "ZIE OOK"
+.PP
+\fBkded5\fR(8),
+\fBkdeinit5\fR(8)
+.SH "FOUTEN/BUGS"
+.PP
+Gebruik
+\m[blue]\fBVolger van bugs van KDE\fR\m[]\&\s-2\u[1]\d\s+2
+om ze te rapporteren\&.
+.SH "AUTEURS"
+.PP
+\fBDarian Lanx\fR <\&content@openprojects\&.net\&>
+.RS 4
+Schreef de originele documentatie\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Heeft de documentatie voor KDE\-frameworks; 5 bijgewerkt\&.
+.RE
+.SH "OPMERKINGEN"
+.IP " 1." 4
+Volger van bugs van KDE
+.RS 4
+\%http://bugskde.org
+.RE

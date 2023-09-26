@@ -1,0 +1,11 @@
+prefix=C:/CraftRoot
+exec_prefix=C:/CraftRoot
+libdir=C:/CraftRoot/lib
+includedir=C:/CraftRoot/include
+
+Name: FFTW
+Description: fast Fourier transform library
+Version: 3.3.7
+Libs: -L${libdir} -lfftw3 
+Libs.private: -lm
+Cflags: -I${includedir}

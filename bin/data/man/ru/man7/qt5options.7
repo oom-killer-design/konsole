@@ -1,0 +1,156 @@
+'\" t
+.\"     Title: qt5options
+.\"    Author: Lauri Watts <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2 февраля 2004 г.
+.\"    Manual: Руководство пользователя KDE
+.\"    Source: KDE
+.\"  Language: Russian
+.\"
+.TH "qt5options" "7" "2 февраля 2004 г\&." "KDE" "Руководство пользователя KDE"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "ИМЯ"
+qt5options \- Общие ключи командной строки для всех приложений, основанных на Qt
+.SH "СИНОПСИС"
+.HP \w'\fB\fIQt\ приложение\fR\fR\ 'u
+\fB\fIQt приложение\fR\fR [Qt\ Generic\ Options]
+.SH "ПАРАМЕТРЫ"
+.PP
+Эти ключи применяются ко всем приложениям
+Qt(TM)
+:
+.PP
+\fB\-\-display\fR \fIdisplayname\fR
+.RS 4
+Использовать дисплей X\-сервера
+\fIdisplayname\fR\&.
+.RE
+.PP
+\fB\-\-session\fR \fIsessionId\fR
+.RS 4
+Восстановить сеанс приложения по ключу
+\fIsessionId\fR
+.RE
+.PP
+\fB\-\-cmap\fR
+.RS 4
+Ограничить количество используемых цветов на 8\-битном дисплее\&.
+.RE
+.PP
+\fB\-\-ncols\fR \fIcount\fR
+.RS 4
+Ограничить количество используемых цветов на 8\-битном дисплее\&.Этот параметр работает только для приложений, использующих режимQApplication::ManyColor\&.
+.RE
+.PP
+\fB\-\-nograb\fR
+.RS 4
+Запрещает
+Qt(TM)
+перехватывать мышь или клавиатуру
+.RE
+.PP
+\fB\-\-dograb\fR
+.RS 4
+При запуске в отладчике применять\fB\-\-nograb\fR\&.Используйте
+\fB\-\-dograb\fR,чтобы явно включить этот режим
+.RE
+.PP
+\fB\-\-sync\fR
+.RS 4
+Включает синхронный режим для отладки\&.
+.RE
+.PP
+\fB\-\-fn\fR,\fB\-\-font\fR \fIfontname\fR
+.RS 4
+Определяет шрифт приложения\&.
+.RE
+.PP
+\fB\-\-bg\fR,\fB\-\-background\fR \fIcolor\fR
+.RS 4
+Задаёт цвет фона по умолчанию и палитру приложения (светлые и тёмные тени вычисляются автоматически)\&.
+.RE
+.PP
+\fB\-\-fg\fR,\fB\-\-foreground\fR \fIcolor\fR
+.RS 4
+Определяет цвет текста по умолчанию\&.
+.RE
+.PP
+\fB\-\-btn\fR,\fB\-\-button\fR \fIcolor\fR
+.RS 4
+Определяет цвет кнопок по умолчанию\&.
+.RE
+.PP
+\fB\-\-name\fR \fIname\fR
+.RS 4
+Определяет имя приложения\&.
+.RE
+.PP
+\fB\-\-title\fR \fItitle\fR
+.RS 4
+Устанавливает заголовок приложения\&.
+.RE
+.PP
+\fB\-\-visual\fR \fITrueColor\fR
+.RS 4
+Приложение будет работать с 8\-битным дисплеем как с полноцветным устройством\&.
+.RE
+.PP
+\fB\-\-inputstyle\fR \fIinputstyle\fR
+.RS 4
+Устанавливает тип ввода XIM (X Input Method)\&.Возможные значения:\fIonthespot\fR,
+\fIoverthespot\fR,
+\fIoffthespot\fR
+and
+\fIroot\fR\&.
+.RE
+.PP
+\fB\-\-im\fR \fIXIM server\fR
+.RS 4
+Устанавливает сервер XIM\&.
+.RE
+.PP
+\fB\-\-noxim\fR
+.RS 4
+Запретить XIM
+.RE
+.PP
+\fB\-\-reverse\fR
+.RS 4
+Отразить расположение виджетов
+.RE
+.PP
+\fB\-\-stylesheet\fR \fIfile\&.qss\fR
+.RS 4
+Применяет стиль Qt к графическим элементам приложения
+.RE
+.SH "СМОТРИТЕ ТАКЖЕ"
+.PP
+\fIkf5options\fR(7)
+.SH "АВТОРЫ"
+.PP
+Страница руководства была написана
+Lauri Watts<lauri@kde\&.org>
+.SH "АВТОР"
+.PP
+\fBLauri Watts\fR <\&lauri@kde\&.org\&>
+.RS 4
+Автор.
+.RE

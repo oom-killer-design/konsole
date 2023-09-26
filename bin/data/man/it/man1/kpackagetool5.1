@@ -1,0 +1,137 @@
+'\" t
+.\"     Title: \fBkpackagetool5\fR
+.\"    Author: [see the "Autori" section]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2017-01-03
+.\"    Manual: Gestore di KPackage
+.\"    Source: KDE Frameworks Frameworks 5.30
+.\"  Language: Italian
+.\"
+.TH "\FBKPACKAGETOOL5\FR" "1" "2017\-01\-03" "KDE Frameworks Frameworks 5.30" "Gestore di KPackage"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOME"
+kpackagetool5 \- Installa, elenca, rimuovi pacchetti Plasma
+.SH "SINOSSI"
+.HP \w'\fBkpackagetool5\fR\ 'u
+\fBkpackagetool5\fR [\fB\-v, \-\-version\fR] [\fB\-h, \-\-hash\fR\fI percorso\fR] [\fB\-g, \-\-global\fR] [\fB\-t, \-\-type\fR\fI tipo\fR] [\fB\-i, \-\-install\fR\fI percorso\fR] [\fB\-u, \-\-upgrade\fR\fI percorso\fR] [\fB\-l, \-\-list\fR] [\fB\-\-list\-types\fR] [\fB\-r, \-\-remove\fR\fI nome\fR] [\fB\-p, \-\-packageroot\fR\fI percorso\fR] [\fB\-\-generate\-index\fR]
+.SH "DESCRIZIONE"
+.PP
+\fBkpackagetool5\fR
+\(`e uno strumento per la riga di comando per installare, elencare e rimuovere i pacchetti di
+Plasma\&.
+.SH "OPZIONI"
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Mostra le informazioni sulla versione\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Mostra questo messaggio di aiuto\&.
+.RE
+.PP
+\fB\-\-hash\fR \fIpercorso\fR
+.RS 4
+Genera l\*(Aqhash SHA1 per il pacchetto nel
+\(Fopercorso\(Fc
+dato\&.
+.RE
+.PP
+\fB\-g, \-\-global\fR
+.RS 4
+Per l\*(Aqinstallazione o la rimozione, opera sui pacchetti installati per tutti gli utenti\&.
+.RE
+.PP
+\fB\-t, \-\-type\fR \fItipo\fR
+.RS 4
+Il tipo del pacchetto, corrispondente al tipo di servizio del pacchetto di estensione,
+ad es\&.
+KPackage/Generic, Plasma/Theme, Plasma/Wallpaper, Plasma/Applet,
+ecc\&.\&.
+.RE
+.PP
+\fB\-i, \-\-install\fR \fIpercorso\fR
+.RS 4
+Installa il pacchetto nel
+\(Fopercorso\(Fc
+dato\&.
+.RE
+.PP
+\fB\-s, \-\-show\fR \fInome\fR
+.RS 4
+Mostra informazioni per il pacchetto
+\(Fonome\(Fc\&.
+.RE
+.PP
+\fB\-u, \-\-upgrade\fR \fIpercorso\fR
+.RS 4
+Aggiorna il pacchetto al
+\(Fopercorso\(Fc
+dato\&.
+.RE
+.PP
+\fB\-l, \-\-list\fR
+.RS 4
+Elenca pacchetti installati\&.
+.RE
+.PP
+\fB\-\-list\-types\fR
+.RS 4
+Elenca tutti i tipi di pacchetti noti che si possono installare\&.
+.RE
+.PP
+\fB\-r, \-\-remove\fR \fInome\fR
+.RS 4
+Rimuovi il pacchetto chiamato
+\(Fonome\(Fc\&.
+.RE
+.PP
+\fB\-p, \-\-packageroot\fR \fIpercorso\fR
+.RS 4
+Percorso assoluto alla radice dei pacchetti\&. Se non indicato, si cercher\(`a nelle cartelle standard dei dati per questa sessione di
+Plasma\&.
+.RE
+.PP
+\fB\-\-generate\-index\fR \fIpercorso\fR
+.RS 4
+Ricrea l\*(Aqindice delle estensioni\&. Va usato assieme con una tra le opzioni
+\fB\-t\fR
+e
+\fB\-g\fR\&. Ricrea l\*(Aqindice per la radice del tipo dato o per la radice del pacchetto\&. Opera nella directory dell\*(Aqutente, a meno che
+\fB\-g\fR
+non sia stato specificato\&.
+.RE
+.SH "VEDI ANCHE"
+.PP
+Una documentazione pi\(`u dettagliata \(`e disponibile a
+\m[blue]\fBhelp:/plasma\-desktop\fR\m[]
+(inserisci questo
+URL
+in
+Konqueror
+o esegui
+\fB\fBkhelpcenter\fR\fR\fB \fR\fB\fIhelp:/plasma\-desktop\fR\fR)\&.
+.SH "AUTORI"
+.PP
+\fBkpackagetool5\fR
+\(`e stato scritto da
+Aaron Seigo<aseigo@kde\&.org>\&.

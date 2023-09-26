@@ -1,0 +1,13 @@
+
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/phonon4qt5
+
+Name: phonon4qt5
+Description: Phonon library needed to build applications
+URL: https://www.kde.org/
+Version: 4.11.1
+Libs: -L${prefix}/lib -lphonon4qt5
+Cflags: -I${prefix}/include/phonon4qt5 
+Requires: 

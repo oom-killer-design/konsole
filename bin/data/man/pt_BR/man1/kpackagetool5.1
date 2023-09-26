@@ -1,0 +1,130 @@
+'\" t
+.\"     Title: \fBkpackagetool5\fR
+.\"    Author: [see the "Autores" section]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 03/01/2017
+.\"    Manual: Gerenciador KPackage
+.\"    Source: KDE Frameworks Frameworks 5.30
+.\"  Language: Portuguese (Brazil)
+.\"
+.TH "\FBKPACKAGETOOL5\FR" "1" "03/01/2017" "KDE Frameworks Frameworks 5.30" "Gerenciador KPackage"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOME"
+kpackagetool5 \- Instalar, listar e remover os pacotes do Plasma
+.SH "SINOPSE"
+.HP \w'\fBkpackagetool5\fR\ 'u
+\fBkpackagetool5\fR [\fB\-v, \-\-version\fR] [\fB\-h, \-\-help\fR] [\fB\-\-hash\fR\fI caminho\fR] [\fB\-g, \-\-global\fR] [\fB\-t, \-\-type\fR\fI tipo\fR] [\fB\-i, \-\-install\fR\fI caminho\fR] [\fB\-s, \-\-show\fR\fI nome\fR] [\fB\-u, \-\-upgrade\fR\fI caminho\fR] [\fB\-l, \-\-list\fR] [\fB\-\-list\-types\fR] [\fB\-r, \-\-remove\fR\fI nome\fR] [\fB\-p, \-\-packageroot\fR\fI caminho\fR] [\fB\-\-generate\-index\fR]
+.SH "DESCRI\(,c\(~aO"
+.PP
+\fBkpackagetool5\fR
+\('e uma ferramenta de linha de comando para instalar, listar e remover pacotes
+Plasma\&.
+.SH "OP\(,c\(~oES"
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Apresenta informa\(,c\(~oes sobre a vers\(~ao\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Apresenta esta ajuda\&.
+.RE
+.PP
+\fB\-\-hash\fR \fI caminho\fR
+.RS 4
+Gera um c\('odigo SHA1 para o pacote dispon\('ivel na
+\(lqlocaliza\(,c\(~ao\(rq\&.
+.RE
+.PP
+\fB\-g, \-\-global\fR
+.RS 4
+Para instalar ou remover, funciona em pacotes instalados para todos os usu\('arios\&.
+.RE
+.PP
+\fB\-t, \-\-type\fR \fI tipo\fR
+.RS 4
+O tipo de pacote, correspondendo ao tipo de servi\(,co do plugin de pacotes, por exemplo KPackage/Gen\('erico, Plasma/Tema, Plasma/Papel de parede, Plasma/Miniaplicativo,
+etc\&.\&.
+.RE
+.PP
+\fB\-i, \-\-install\fR \fI caminho\fR
+.RS 4
+Instala o pacote dispon\('ivel no
+\(lqcaminho\(rq\&.
+.RE
+.PP
+\fB\-s, \-\-show\fR \fI nome\fR
+.RS 4
+Mostra as informa\(,c\(~oes do pacote
+\(lqnome\(rq\&.
+.RE
+.PP
+\fB\-u, \-\-upgrade\fR \fIcaminho\fR
+.RS 4
+Atualiza o pacote dispon\('ivel na
+\(lqcaminho\(rq\&.
+.RE
+.PP
+\fB\-l, \-\-list\fR
+.RS 4
+Lista os pacotes instalados\&.
+.RE
+.PP
+\fB\-\-list\-types\fR
+.RS 4
+Lista todos os tipos de pacotes que podem ser instalados\&.
+.RE
+.PP
+\fB\-r, \-\-remove\fR \fInome\fR
+.RS 4
+Remove o pacote chamado
+\(lqnome\(rq\&.
+.RE
+.PP
+\fB\-p, \-\-packageroot\fR \fIcaminho\fR
+.RS 4
+O caminho completo do pacote raiz\&. Se n\(~ao for indicado, ser\(~ao pesquisadas as pastas de dados padr\(~ao desta sess\(~ao do
+Plasma\&.
+.RE
+.PP
+\fB\-\-generate\-index\fR \fI caminho\fR
+.RS 4
+Recria o \('indice do plugin\&. Ser\('a usado em conjunto com as op\(,c\(~oes
+\fB\-t\fR
+ou
+\fB\-g\fR\&. Recria o \('indice para o tipo indicado ou para a raiz dos pacotes\&. Funciona sobre a pasta do usu\('ario, a menos que seja usada a op\(,c\(~ao
+\fB\-g\fR\&.
+.RE
+.SH "VEJA TAMB\('eM"
+.PP
+Documenta\(,c\(~ao do usu\('ario mais detalhada est\('a dispon\('ivel em
+\m[blue]\fBhelp:/plasma\-desktop\fR\m[]
+(quer atrav\('es deste
+URL
+no
+Konqueror, quer atrav\('es do comando
+\fB\fBkhelpcenter\fR\fR\fB \fR\fB\fIhelp:/plasma\-desktop\fR\fR)\&.
+.SH "AUTORES"
+.PP
+\fBkpackagetool5\fR
+foi escrito por
+Aaron Seigo<aseigo@kde\&.org>\&.

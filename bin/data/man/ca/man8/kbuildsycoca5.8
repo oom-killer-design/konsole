@@ -1,0 +1,143 @@
+'\" t
+.\"     Title: \fBkbuildsycoca5\fR
+.\"    Author: Lanx, Darian <content@openprojects.net>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 17 de setembre de 2015
+.\"    Manual: Frameworks del KDE: KService
+.\"    Source: Frameworks del KDE Frameworks 5.15
+.\"  Language: Catalan
+.\"
+.TH "\FBKBUILDSYCOCA5\FR" "8" "17 de setembre de 2015" "Frameworks del KDE Frameworks" "Frameworks del KDE: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOM"
+kbuildsycoca5 \- Ref\(`a el cau de la configuraci\('o del sistema per als fitxers d\*(Aqescriptori al KService
+.SH "SINOPSI"
+.HP \w'\fBkbuildsycoca5\fR\ 'u
+\fBkbuildsycoca5\fR [\fIOPCIONS\fR...]
+.SH "DESCRIPCI\('O"
+.PP
+El
+\fBkbuildsycoca5\fR
+construeix el cau binari de les dades emmagatzemades als fitxers
+\&.desktop,
+\&.xml
+i tipus
+MIME
+que l\*(Aqentorn de treball KService utilitza per a trobar connectors, aplicacions i altres serveis\&.
+.PP
+La biblioteca KService empra aquesta base de dades per a proporcionar de manera eficient la informaci\('o requerida\&.
+.PP
+Normalment, els usuaris no necessitaran executar aquesta aplicaci\('o directament\&. El KService l\*(Aqexecutar\(`a si cal, cada vegada que algun dels fitxers canvi\(:i les dades desades a la mem\(`oria cau\&.
+.SH "OPCIONS"
+.PP
+\fB\-\-global\fR
+.RS 4
+Ignora els fitxers definits per l\*(Aqusuari (a
+\fIXDG_DATA_HOME\fR)\&. Actualment, aix\(`o nom\('es est\(`a suportat en sistemes
+UNIX\(rg\&.
+.RE
+.PP
+\fB\-\-noincremental\fR
+.RS 4
+En lloc d\*(Aqutilitzar la mem\(`oria cau existent i nom\('es actualitzar la informaci\('o que ha canviat o que ha estat afegida, comen\(,car\(`a amb una mem\(`oria cau buida\&. S\*(Aqignorar\(`a si s\*(Aqestableix l\*(Aqopci\('o
+\fB\-\-global\fR\&.
+.RE
+.PP
+\fB\-\-nosignal\fR
+.RS 4
+De manera ordin\(`aria, el
+\fBkbuildsycoca5\fR
+envia un senyal a trav\('es de
+D\-Bus
+una vegada que la mem\(`oria cau s\*(Aqactualitza per a totes les aplicacions que utilitzen el KService, de manera que sempre estan treballant amb la informaci\('o m\('es recent\&. Aquesta opci\('o suprimeix aquest comportament\&.
+.RE
+.PP
+\fB\-\-menutest\fR
+.RS 4
+Prova la generaci\('o de la base de dades del men\('u d\*(Aqaplicacions\&. En realitat no construeix la mem\(`oria cau\&.
+.RE
+.PP
+\fB\-\-testmode\fR
+.RS 4
+Utilitza el \(Fomode de prova\(Fc QStandardPaths per a evitar interferir amb les dades de l\*(Aqusuari\&. Aix\(`o \('es per a \('us amb les proves unit\(`aries\&.
+.RE
+.PP
+\fB\-\-track \fR\fB\fIID\-men\('u\fR\fR
+.RS 4
+Segueix un identificador de men\('u per a la depuraci\('o\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Mostra la informaci\('o sobre l\*(Aqautor\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Mostra la informaci\('o sobre la llic\(`encia\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Mostra un text breu d\*(Aqajuda\&.
+.RE
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Mostra la informaci\('o sobre la versi\('o\&.
+.RE
+.SH "FITXERS"
+.PP
+\fIcachedir\fR/ksycoca5_[idioma]_[sha1\-dels\-dirs]
+.RS 4
+La mem\(`oria cau del KService generada pel
+\fBkbuildsycoca5\fR\&. Sobre els sistemes
+UNIX\(rg, el
+\fIdirectori_cau\fR
+sol ser
+\fBXDG_CACHE_HOME\fR\&.
+.RE
+.SH "VEGEU TAMB\('E"
+.PP
+\fBkded5\fR(8),
+\fBkdeinit5\fR(8)
+.SH "ERRORS"
+.PP
+Si us plau, empreu el
+\m[blue]\fBSeguidor d\*(Aqerrors del KDE\fR\m[]\&\s-2\u[1]\d\s+2
+(escriviu\-hi en angl\(`es) per a informar dels errors\&.
+.SH "AUTORS"
+.PP
+\fBLanx, Darian\fR <\&content@openprojects\&.net\&>
+.RS 4
+Va escriure la documentaci\('o original\&.
+.RE
+.PP
+\fBMerry, Alex\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Ha actualitzat la documentaci\('o al Frameworks 5 del KDE\&.
+.RE
+.SH "NOTES"
+.IP " 1." 4
+Seguidor d'errors del KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

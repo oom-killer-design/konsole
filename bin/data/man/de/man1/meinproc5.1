@@ -1,0 +1,160 @@
+'\" t
+.\"     Title: \fBmeinproc5\fR
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2014-05-08
+.\"    Manual: meinproc5-Benutzerhandbuch
+.\"    Source: KDE Frameworks Frameworks 5.0
+.\"  Language: German
+.\"
+.TH "\FBMEINPROC5\FR" "1" "2014\-05\-08" "KDE Frameworks Frameworks 5.0" "meinproc5-Benutzerhandbuch"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+meinproc5 \- KDE\-Umsetzung f\(:ur XML
+.SH "\(:UBERSICHT"
+.HP \w'\fBmeinproc5\fR\ 'u
+\fBmeinproc5\fR [\-h,\ \-\-help] [\-v,\ \-\-version] [\-\-cache\fI\ datei\fR] [\-\-check] [\-\-srcdir\fI\ ordner\fR] [\-\-param\ \fIschl\(:ussel\fR=\fIwert\fR] [[[\-o] | [\-\-output]]\fI datei\fR] [\-\-stdout] [\-\-stylesheet\fI\ xsl\fR] docbook\-datei
+.SH "BESCHREIBUNG"
+.PP
+\fBmeinproc5\fR
+wandelt DocBook\-Dateien in
+HTML
+um\&.
+.SH "ALLGEMEINE OPTIONEN"
+.PP
+.PP
+\fB\-h\fR\fB\-\-help\fR
+.RS 4
+Hilfe zu verf\(:ugbaren Optionen anzeigen\&.
+.RE
+.PP
+\fB\-v\fR\fB\-\-version\fR
+.RS 4
+Versionsinformation anzeigen\&.
+.RE
+.SH "ANWENDUNGSOPTIONEN"
+.PP
+\fB\-\-cache\fR \fIdatei\fR
+.RS 4
+Zwischenspeicher\-Datei f\(:ur das Dokument erstellen\&.
+.RE
+.PP
+\fB\-\-check\fR
+.RS 4
+Formale Korrektheit des Dokuments \(:uberpr\(:ufen\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+Die Ausgaben k\(:onnen auf den ersten Blick abschreckend wirken, da ein einziger kleiner Fehler eine ganze Welle an Fehlermeldungen ausl\(:osen kann\&. Der Trick ist ganz einfach: Sehen Sie sich zun\(:achst den ersten Fehler an, beheben Sie ihn, speichern die Datei und f\(:uhren anschlie\(ssend \fBmeinproc5\fR erneut aus\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\fB\-o\fR, \fB\-\-output\fR\fI datei\fR
+.RS 4
+Gesamtes Dokument in
+\fIdatei\fR
+ausgeben\&.
+.RE
+.PP
+\fB\-\-stdout\fR
+.RS 4
+Gesamtes Dokument auf stdout ausgeben\&.
+.RE
+.PP
+\fB\-\-stylesheet\fR \fIxsl\fR
+.RS 4
+Zu benutzende Stilvorlage\&.
+.RE
+.PP
+\fB\-\-srcdir\fR \fIordner\fR
+.RS 4
+Setzt den Basisordner f\(:ur die Suche nach kdoctools\&.
+.RE
+.PP
+\fB\-\-param\fR schl\(:ussel=wert
+.RS 4
+Setzt Parameter, die an die Stilvorlage \(:ubergeben werden\&.
+.RE
+.SH "BENUTZUNG"
+.PP
+Der meist genutzte Aufruf von
+\fBmeinproc5\fR
+sieht ganz einfach so aus:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \fR\fB\fIDocbook\-Datei\fR\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+, wobei es sich bei der
+\fIDocbook\-Datei\fR
+zumeist um die Datei index\&.docbook handelt\&. Mit diesem Aufruf werden
+HTML\-Dateien erzeugt\&. Beachten Sie bitte, dass Sie die so erzeugten Dateien nur mit
+KDE\-basierten Browsern wie z\&. B\&.
+Konqueror
+betrachten k\(:onnen\&.
+.PP
+Wenn die erzeugten
+HTML\-Dateien auch mit anderen Browsern betrachtet werden sollen (z\&. B\&. weil die Dateien im Internet ver\(:offentlicht werden sollen), so verwenden Sie den Aufruf
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \-\-stylesheet \fR\fB\fIstylesheet\-Name\fR\fR\fB \fR\fB\fIDocbook\-Datei\fR\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+, wobei es sich bei
+\fIstylesheet\-Name\fR
+um den vollst\(:andigen Pfad zu einem der
+XSL\-Stilvorlagen im Ordner <kdoctools_installation_prefix>/share/kf5/kdoctools/customization handelt\&. Um brauchbare Ausgaben f\(:ur die Internet\-Ver\(:offentlichung zu erhalten, k\(:onnen Sie beispielsweise die Stilvorlage
+\fBkde\-web\&.xsl\fR
+oder
+\fBkde\-chunk\-online\&.xsl\fR
+verwenden\&. In der
+README\-Datei im gleichen Ordner finden Sie weitere Details\&.
+.SH "SIEHE AUCH"
+.PP
+\fIkf5options\fR(7),
+\fIqt5options\fR(7)
+.SH "FEHLER"
+.PP
+Bitte berichten Sie Fehler im
+\m[blue]\fBFehlerverfolgungssystem von KDE\fR\m[]\&\s-2\u[1]\d\s+2\&.
+.SH "FU\(ssNOTEN"
+.IP " 1." 4
+Fehlerverfolgungssystem von KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

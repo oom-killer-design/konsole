@@ -1,0 +1,188 @@
+'\" t
+.\"     Title: qt5options
+.\"    Author: Lauri Watts <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 4 червня 2016 року
+.\"    Manual: Документація до програм командного рядка Qt
+.\"    Source: KDE Frameworks Qt 5.4
+.\"  Language: Ukrainian
+.\"
+.TH "qt5options" "7" "4 червня 2016 року" "KDE Frameworks Qt 5.4" "Документація до програм команд"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "НАЗВА"
+qt5options \- Загальні параметри командного рядка для всіх програм, заснованих на наборі інструментів Qt(TM)
+.SH "КОРОТКИЙ ОГЛЯД"
+.HP \w'\fB\fIпрограма\ Qt\fR\fR\ 'u
+\fB\fIпрограма Qt\fR\fR [\fB\-style=\fR\ \fIстиль\fR\ /\ \fB\-style\fR\ \fIстиль\fR] [\fB\-stylesheet=\fR\ \fIтаблиця\ стилів\fR\ /\ \fB\-stylesheet\fR\ \fIтаблиця\ стилів\fR] [\fB\-widgetcount\fR] [\fB\-reverse\fR] [\fB\-qmljsdebugger=\fR\ \fIпорт\fR] [\fB\-platform\fR\ \fIназва_платформи[:параметри]\fR] [\fB\-platformpluginpath\fR\ \fIшлях\fR] [\fB\-platformtheme\fR\ \fIтема_платформи\fR] [\fB\-plugin\fR\ \fIдодаток\fR] [\fB\-qwindowgeometry\fR\ \fIгеометричні\ параметри\fR] [\fB\-qwindowicon\fR\ \fIпіктограма\fR] [\fB\-qwindowtitle\fR\ \fIзаголовок\fR] [\fB\-reverse\fR] [\fB\-session\fR\ \fIсеанс\fR] [\fB\-display\fR\ \fIназва_вузла:номер_екрана\fR] [\fB\-geometry\fR\ \fIгеометричні\ параметри\fR] [\fB\-dialogs=\fR\ \fI[xp|none]\fR] [\fB\-fontengine=\fR\ \fIfreetype\fR] [\fB\-h,\ \-\-help\ та\ \-?\ у\ Windows\fR] [\fB\-v\ \-\-version\fR]
+.SH "ПАРАМЕТРИ"
+.PP
+Для всіх програм на
+Qt(TM)
+можна застосовувати такі параметри:
+.PP
+\fB\-style=\fR \fIстиль\fR / \fB\-style\fR \fIстиль\fR
+.RS 4
+Встановити стиль графічного інтерфейсу програми\&. Можливі значення залежать від налаштувань системи\&. Якщо
+Qt(TM)
+зібрано із додатковими стилями або має додаткові стилі як додатки, доступ до них можна буде отримати за допомогою параметра командного рядка
+\fB\-style\fR\&.
+.RE
+.PP
+\fB\-stylesheet=\fR \fIтаблиця стилів\fR / \fB\-stylesheet\fR \fIтаблиця стилів\fR
+.RS 4
+Встановити таблицю стилів програми\&. Значенням має бути шлях до файла, що містить таблицю стилів\&.
+.RE
+.PP
+\fB\-widgetcount\fR
+.RS 4
+Вивести діагностичне повідомлення наприкінці\&. Повідомлення міститиме дані щодо кількості віджетів, які не знищено, та максимальної кількості віджетів, які працювали одночасно\&.
+.RE
+.PP
+\fB\-reverse\fR
+.RS 4
+Встановити напрям компонування вікна програми у значення
+Qt::RightToLeft\&. Цей параметр призначено для полегшення діагностування проблем\&. Ним не варто користуватися для остаточного робочого варіанта програми\&. Типове значення автоматично визначається на основі даних щодо локалі користувача (див\&. також
+QLocale::textDirection())\&.
+.RE
+.PP
+\fB\-qmljsdebugger=\fR \fIпорт\fR
+.RS 4
+Задіяти засіб діагностики QML/JS на вказаному порті\&. Значення слід вказувати у форматі port:1234[,block], де значення \(Foblock\(Fc є необов\(cqязковим\&. Воно наказує програмі чекати, доки засіб діагностики із нею не з\(cqєднається\&.
+.RE
+.PP
+\fB\-platform\fR \fIназва_платформи[:параметри]\fR
+.RS 4
+Вказати додаток
+Qt(TM)
+Platform Abstraction (QPA)\&.
+.RE
+.PP
+\fB\-platformpluginpath\fR \fIшлях\fR
+.RS 4
+Вказати шлях до додатків програмної платформи\&.
+.RE
+.PP
+\fB\-platformtheme\fR \fIтема_платформи\fR
+.RS 4
+Вказати тему для програмної платформи\&.
+.RE
+.PP
+\fB\-plugin\fR \fIдодаток\fR
+.RS 4
+Вказати додаткові додатки для завантаження\&. Можна вказати декілька таких аргументів\&.
+.RE
+.PP
+\fB\-qwindowgeometry\fR \fIгеометричні параметри\fR
+.RS 4
+Вказати геометричні параметри головного вікна за допомогою синтаксису
+X11\&. Приклад: \-qwindowgeometry 100x100+50+50
+.RE
+.PP
+\fB\-qwindowicon\fR \fIпіктограма\fR
+.RS 4
+Встановити типову піктограму вікна\&.
+.RE
+.PP
+\fB\-qwindowtitle\fR \fIзаголовок\fR
+.RS 4
+Встановити заголовок для першого вікна\&.
+.RE
+.PP
+\fB\-session\fR \fIсеанс\fR
+.RS 4
+Відновити стан програми з попереднього сеансу\&.
+.RE
+.PP
+\fB\-display\fR \fIназва_вузла:номер_екрана\fR
+.RS 4
+Перемкнути дисплей у
+X11\&. Перевизначає змінну середовища
+\fBDISPLAY\fR\&.
+.RE
+.PP
+\fB\-geometry\fR \fIгеометричні параметри\fR
+.RS 4
+Вказати геометричні параметри вікна для головного вікна у
+X11\&. Приклад: \-geometry 100x100+50+50\&.
+.RE
+.PP
+\fB\-dialogs=\fR \fI[xp|none]\fR
+.RS 4
+Доступний лише для \-platform windows\&. Якщо вказано \(Foxp\(Fc, використовувати діалогові вікна у стилі XP\&. \(Fonone\(Fc вимикає такі налаштовування\&.
+.RE
+.PP
+\fB\-fontengine=\fR \fIfreetype\fR
+.RS 4
+Використовувати рушій обробки шрифтів FreeType\&.
+.RE
+.PP
+\fB\-h, \-\-help і \-? у Windows\fR
+.RS 4
+Вивести список усіх параметрів та опис програми\&.
+.RE
+.PP
+\fB\-v \-\-version\fR
+.RS 4
+Вивести рядок версії програми\&.
+.RE
+.SH "ПРОЧИТАЙТЕ ТАКОЖ"
+.PP
+\fIkf5options\fR(7)
+.SH "АВТОРИ"
+.PP
+Автором першої версії сторінки довідника є
+Lauri Watts<lauri@kde\&.org>
+.PP
+Оновлено до Frameworks 5
+Burkhard L\(:uck<lueck@hube\-lueck\&.de>
+.PP
+Інформацію для цієї сторінки man запозичено з
+\m[blue]\fBдокументації до QApplication\fR\m[]\&\s-2\u[1]\d\s+2,
+\m[blue]\fBдокументації QGuiApplication\fR\m[]\&\s-2\u[2]\d\s+2
+та
+\m[blue]\fBдокументації з QCommandLineParser\fR\m[]\&\s-2\u[3]\d\s+2\&.
+.SH "АВТОРИ"
+.PP
+\fBLauri Watts\fR <\&lauri@kde\&.org\&>
+.RS 4
+Автор.
+.RE
+.PP
+\fBBurkhard L\(:uck\fR <\&lueck@hube\-lueck\&.de\&>
+.RS 4
+Автор.
+.RE
+.SH "ПРИМІТКИ"
+.IP " 1." 4
+документації до QApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qapplication.html#QApplication
+.RE
+.IP " 2." 4
+документації QGuiApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication
+.RE
+.IP " 3." 4
+документації з QCommandLineParser
+.RS 4
+\%https://doc.qt.io/qt-5/qcommandlineparser.html
+.RE

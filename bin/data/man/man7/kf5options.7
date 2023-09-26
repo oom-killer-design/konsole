@@ -1,0 +1,88 @@
+'\" t
+.\"     Title: kf5options
+.\"    Author: Lauri Watts <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2016-05-13
+.\"    Manual: Frameworks Command Line Documentation
+.\"    Source: KDE Frameworks Frameworks 5.22
+.\"  Language: English
+.\"
+.TH "KF5OPTIONS" "7" "2016\-05\-13" "KDE Frameworks Frameworks 5.22" "Frameworks Command Line Docume"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+kf5options \- Common commandline options for all applications based on KDE Frameworks 5
+.SH "SYNOPSIS"
+.HP \w'\fB\fIKDE\ application\fR\fR\ 'u
+\fB\fIKDE application\fR\fR [\fB\-h,\ \-\-help\fR] [\fB\-v,\ \-\-version\fR] [\fB\-\-author\fR] [\fB\-\-license\fR] [\fB\-\-desktopfile\fR\ \fIfile\ name\fR]
+.SH "OPTIONS"
+.PP
+The following options apply to all
+KDE
+applications:
+.PP
+\fB\-h\fR \fB\-\-help\fR
+.RS 4
+This lists the options available at the command line\&.
+.RE
+.PP
+\fB\-v\fR \fB\-\-version\fR
+.RS 4
+Lists version information for
+\fIKDE application\fR\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Lists
+\fIKDE application\fR
+authors in the terminal window\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Shows license information\&.
+.RE
+.PP
+\fB\-\-desktopfile\fR \fIfile name\fR
+.RS 4
+The base file name of the desktop entry for this application\&.
+.sp
+This is in particular useful for wrapper applications and applications having in general multiple desktop files\&. Thus each desktop file can put its own name into the exec command\&.
+.RE
+.SH "SEE ALSO"
+.PP
+qt5options(7)
+.SH "AUTHORS"
+.PP
+Man page originally written by
+Lauri Watts<lauri@kde\&.org>
+for kdelibs4
+.PP
+Updated to
+Frameworks
+5 by
+Burkhard Lück<lueck@hube\-lueck\&.de>
+.SH "AUTHOR"
+.PP
+\fBLauri Watts\fR <\&lauri@kde\&.org\&>
+.RS 4
+Author.
+.RE

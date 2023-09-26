@@ -1,0 +1,128 @@
+'\" t
+.\"     Title: \fBkpackagetool5\fR
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2017-01-03
+.\"    Manual: Kpackage-pakethantering
+.\"    Source: KDE Ramverk Ramverk 5.30
+.\"  Language: Swedish
+.\"
+.TH "\FBKPACKAGETOOL5\FR" "1" "2017\-01\-03" "KDE Ramverk Ramverk 5.30" "Kpackage-pakethantering"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAMN"
+kpackagetool5 \- Installera, lista eller ta bort paket f\(:or Plasma
+.SH "SYNOPSIS"
+.HP \w'\fBkpackagetool5\fR\ 'u
+\fBkpackagetool5\fR [\fB\-v, \-\-version\fR] [\fB\-h, \-\-help\fR] [\fB\-\-hash\fR\fI s\(:okv\(:ag\fR] [\fB\-g, \-\-global\fR] [\fB\-t, \-\-type\fR\fI typ\fR] [\fB\-i, \-\-install\fR\fI s\(:okv\(:ag\fR] [\fB\-s, \-\-show\fR\fI name\fR] [\fB\-u, \-\-upgrade\fR\fI path\fR] [\fB\-l, \-\-list\fR] [\fB\-\-list\-types\fR] [\fB\-r, \-\-remove\fR\fI namn\fR] [\fB\-p, \-\-packageroot\fR\fI s\(:okv\(:ag\fR] [\fB\-\-generate\-index\fR]
+.SH "BESKRIVNING"
+.PP
+\fBkpackagetool5\fR
+\(:ar ett kommandoradsverktyg f\(:or att installera, lista eller ta bort
+Plasma\-paket\&.
+.SH "V\(:ALJARE"
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Visar versionsinformation\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+visar den h\(:ar hj\(:alpen\&.
+.RE
+.PP
+\fB\-\-hash\fR \fI s\(:okv\(:ag\fR
+.RS 4
+Skapa ett SHA1\-kondensat f\(:or paketet p\(oa
+\(rqs\(:okv\(:ag\(rq\&.
+.RE
+.PP
+\fB\-g, \-\-global\fR
+.RS 4
+Installation eller borttagning utf\(:ors med paket installerade f\(:or alla anv\(:andare\&.
+.RE
+.PP
+\fB\-t, \-\-type\fR \fI typ\fR
+.RS 4
+Paketets typ, som motsvarar paketinsticksprogrammets tj\(:ansttyp, t\&.ex\&. KPackage/Generic, Plasma/Theme, Plasma/Wallpaper, Plasma/Applet, etc\&.
+.RE
+.PP
+\fB\-i, \-\-install\fR \fI s\(:okv\(:ag\fR
+.RS 4
+Installera paketet
+\(rqs\(:okv\(:ag\(rq\&.
+.RE
+.PP
+\fB\-s, \-\-show\fR \fI namn\fR
+.RS 4
+Visa information om paketet
+\(rqnamn\(rq\&.
+.RE
+.PP
+\fB\-u, \-\-upgrade\fR \fI s\(:okv\(:ag\fR
+.RS 4
+Uppgradera paketet
+\(rqs\(:okv\(:ag\(rq\&.
+.RE
+.PP
+\fB\-l, \-\-list\fR
+.RS 4
+Lista installerade paket\&.
+.RE
+.PP
+\fB\-\-list\-types\fR
+.RS 4
+listar alla k\(:anda pakettyper som kan installeras\&.
+.RE
+.PP
+\fB\-r, \-\-remove\fR \fI namn\fR
+.RS 4
+Ta bort paketet som heter
+\(rqnamn\(rq\&.
+.RE
+.PP
+\fB\-p, \-\-packageroot\fR \fI s\(:okv\(:ag\fR
+.RS 4
+Absolut s\(:okv\(:ag till paketroten\&. Om den inte anges, anv\(:ands standarddatakatalogerna f\(:or
+Plasma\-sessionen ist\(:allet\&.
+.RE
+.PP
+\fB\-\-generate\-index\fR \fI s\(:okv\(:ag\fR
+.RS 4
+Skapa om index \(:over insticksprogram\&. Att anv\(:andas tillsammans med v\(:aljaren
+\fB\-t\fR
+eller
+\fB\-g\fR\&. Skapar om index f\(:or den givna typen eller paketroten\&. Arbetar i anv\(:andarkatalogen, om inte
+\fB\-g\fR
+anv\(:ands\&.
+.RE
+.SH "SE OCKS\(oA"
+.PP
+Mer detaljerad anv\(:andardokumentation \(:ar tillg\(:anglig med
+\m[blue]\fBhelp:/plasma\-desktop\fR\m[]
+(skriv antingen in webbadressen i
+Konqueror, eller k\(:or
+\fB\fBkhelpcenter\fR\fR\fB \fR\fB\fIhelp:/plasma\-desktop\fR\fR)\&.
+.SH "UPPHOVSM\(:AN"
+.PP
+\fBkpackagetool5\fR
+\(:ar skrivet av
+Aaron Seigo<aseigo@kde\&.org>\&.

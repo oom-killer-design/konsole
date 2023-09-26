@@ -1,0 +1,192 @@
+'\" t
+.\"     Title: qt5options
+.\"    Author: Lauri Watts <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2016-06-04
+.\"    Manual: Qt-Befehlszeilendokumentation
+.\"    Source: KDE Frameworks Qt 5.4
+.\"  Language: German
+.\"
+.TH "QT5OPTIONS" "7" "2016\-06\-04" "KDE Frameworks Qt 5.4" "Qt-Befehlszeilendokumentation"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+qt5options \- Allgemeine Befehlszeilenparameter f\(:ur alle Anwendungen, die auf dem Qt(TM)\-Toolkit basieren\&.
+.SH "\(:UBERSICHT"
+.HP \w'\fB\fIQt\ application\fR\fR\ 'u
+\fB\fIQt application\fR\fR [\fB\-style=\fR\ \fIstyle\fR\ /\ \fB\-style\fR\ \fIstyle\fR] [\fB\-stylesheet=\fR\ \fIstylesheet\fR\ /\ \fB\-stylesheet\fR\ \fIstylesheet\fR] [\fB\-widgetcount\fR] [\fB\-reverse\fR] [\fB\-qmljsdebugger=\fR\ \fIport\fR] [\fB\-platform\fR\ \fIplatformName[:options]\fR] [\fB\-platformpluginpath\fR\ \fIpath\fR] [\fB\-platformtheme\fR\ \fIplatformTheme\fR] [\fB\-plugin\fR\ \fIplugin\fR] [\fB\-qwindowgeometry\fR\ \fIgeometry\fR] [\fB\-qwindowicon\fR\ \fIicon\fR] [\fB\-qwindowtitle\fR\ \fItitle\fR] [\fB\-reverse\fR] [\fB\-session\fR\ \fIsession\fR] [\fB\-display\fR\ \fIhostname:screen_number\fR] [\fB\-geometry\fR\ \fIgeometry\fR] [\fB\-dialogs=\fR\ \fI[xp|none]\fR] [\fB\-fontengine=\fR\ \fIfreetype\fR] [\fB\-h,\ \-\-help\ and\ \-?\ on\ \fR\fBWindows\(rg\fR] [\fB\-v\ \-\-version\fR]
+.SH "OPTIONEN"
+.PP
+Die folgenden Parameter gelten f\(:ur alle
+Qt(TM)\-Anwendungen:
+.PP
+\fB\-style=\fR \fIstyle\fR / \fB\-style\fR \fIstyle\fR
+.RS 4
+Legt den
+GUI\-Stil der Anwendung fest\&. M\(:ogliche Werte h\(:angen von der Einstellung des Systems ab\&. Wurde
+Qt(TM)
+mit zus\(:atzlichen Stilen kompiliert oder gibt es zus\(:atzliche Stile als Module, k\(:onnen diese als Argumente f\(:ur die Option
+\fB\-style\fR
+der Befehlszeile verwendet werden\&.
+.RE
+.PP
+\fB\-stylesheet=\fR \fIstylesheet\fR / \fB\-stylesheet\fR \fIstylesheet\fR
+.RS 4
+Legt die Stilvorlage der Anwendung fest\&. Als Wert muss ein Pfad zu einer Datei mit dem Stile angegeben werden\&.
+.RE
+.PP
+\fB\-widgetcount\fR
+.RS 4
+Gibt am Ende eine Fehlermeldung mit der Anzahl der nicht freigegebenen Bedienelemente sowie die gesamte Anzahl der zu diesem Zeitpunkt existierenden Bedienelemente aus\&.
+.RE
+.PP
+\fB\-reverse\fR
+.RS 4
+Legt die Richtung des Layouts der Anwendung auf
+Qt::RightToLeft
+fest\&. Diese Option ist nur f\(:ur die Fehlersuche gedacht und sollte normalerweise nicht verwendet werden\&. Der Standardwert wird automatisch aus der Spracheinstellung des Benutzers ermittelt, siehe auch
+QLocale::textDirection()\&.
+.RE
+.PP
+\fB\-qmljsdebugger=\fR \fIport\fR
+.RS 4
+Aktiviert den QML/JS\-Debugger mit dem angegebenen Port\&. Der Wert muss im Format \(Bqport:1234[,block]\(lq angeben werden, dabei ist \(Bqblock\(lq optional\&. Mit \(Bqblock\(lq wartet eine Anwendung auf eine Verbindung zu einem Debugger\&.
+.RE
+.PP
+\fB\-platform\fR \fIplatformName[:options]\fR
+.RS 4
+Gibt das QPA\-Modul (Qt(TM)
+Platform Abstraction) an\&.
+.RE
+.PP
+\fB\-platformpluginpath\fR \fIpath\fR
+.RS 4
+Gibt den Pfad zu den Plattformmodulen an\&.
+.RE
+.PP
+\fB\-platformtheme\fR \fIplatformTheme\fR
+.RS 4
+Legt das Design der Plattform fest\&.
+.RE
+.PP
+\fB\-plugin\fR \fIplugin\fR
+.RS 4
+Gibt zus\(:atzlich zu ladende Module an\&. Dieses Argument kann mehrfach verwendet werden\&.
+.RE
+.PP
+\fB\-qwindowgeometry\fR \fIgeometry\fR
+.RS 4
+Gibt die Geometrie des Hauptfensters f\(:ur
+X11\-Systeme am, zum Beispiel geometry x100+50+50
+.RE
+.PP
+\fB\-qwindowicon\fR \fIicon\fR
+.RS 4
+Legt die Standardsymbol des Fensters fest\&.
+.RE
+.PP
+\fB\-qwindowtitle\fR \fItitle\fR
+.RS 4
+Legt den Titel des ersten Fensters fest\&.
+.RE
+.PP
+\fB\-session\fR \fIsession\fR
+.RS 4
+Wiederherstellung der Anwendung von einer fr\(:uheren Sitzung\&.
+.RE
+.PP
+\fB\-display\fR \fIhostname:screen_number\fR
+.RS 4
+Wechselt die Anzeige auf
+X11\-Systemen\&. \(:Uberschreibt die Umgebungsvariable
+\fBDISPLAY\fR\&.
+.RE
+.PP
+\fB\-geometry\fR \fIgeometry\fR
+.RS 4
+Gibt die Geometrie des Hauptfensters f\(:ur
+X11\-Systeme am, zum Beispiel geometry 100x100+50+50\&.
+.RE
+.PP
+\fB\-dialogs=\fR \fI[xp|none]\fR
+.RS 4
+Nur verf\(:ugbar f\(:ur \(Bq\-platform windows\(lq\&. Mit \(Bqxp\(lq werden die nativen Dialoge im XP\-Stile verwendet, mit \(Bqnone\(lq werden sie ausgeschaltet\&.
+.RE
+.PP
+\fB\-fontengine=\fR \fIfreetype\fR
+.RS 4
+Verwendet das FreeType\-schriftmodul\&.
+.RE
+.PP
+\fB\-h, \-\-help und \-? unter \fR\fBWindows\(rg\fR
+.RS 4
+Zeigt alle Optionen und eine Beschreibung der Anwendung an\&.
+.RE
+.PP
+\fB\-v \-\-version\fR
+.RS 4
+Zeigt die Version der Anwendung an\&.
+.RE
+.SH "SIEHE AUCH"
+.PP
+\fIkf5options\fR(7)
+.SH "AUTOREN"
+.PP
+Die Handbuchseite wurde urspr\(:unglich von
+Lauri Watts<lauri@kde\&.org>
+geschrieben
+.PP
+Aktualisierung f\(:ur
+Frameworks
+5 durch
+Burkhard L\(:uck<lueck@hube\-lueck\&.de>
+.PP
+Die Informationen dieser Handbuchseite stammen von der
+\m[blue]\fBQApplication\-Dokumentation\fR\m[]\&\s-2\u[1]\d\s+2, der
+\m[blue]\fBQGuiApplication\-Dokumentation\fR\m[]\&\s-2\u[2]\d\s+2
+und der
+\m[blue]\fBQCommandLineParser\-Dokumentation\fR\m[]\&\s-2\u[3]\d\s+2\&.
+.SH "AUTOREN"
+.PP
+\fBLauri Watts\fR <\&lauri@kde\&.org\&>
+.RS 4
+Autor.
+.RE
+.PP
+\fBBurkhard L\(:uck\fR <\&lueck@hube\-lueck\&.de\&>
+.RS 4
+Autor.
+.RE
+.SH "FU\(ssNOTEN"
+.IP " 1." 4
+QApplication-Dokumentation
+.RS 4
+\%https://doc.qt.io/qt-5/qapplication.html#QApplication
+.RE
+.IP " 2." 4
+QGuiApplication-Dokumentation
+.RS 4
+\%https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication
+.RE
+.IP " 3." 4
+QCommandLineParser-Dokumentation
+.RS 4
+\%https://doc.qt.io/qt-5/qcommandlineparser.html
+.RE

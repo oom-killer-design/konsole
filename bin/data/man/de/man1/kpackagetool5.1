@@ -1,0 +1,141 @@
+'\" t
+.\"     Title: \fBkpackagetool5\fR
+.\"    Author: [see the "Autoren" section]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2017-01-03
+.\"    Manual: KPackage-Verwaltung
+.\"    Source: KDE Frameworks Frameworks 5.30
+.\"  Language: German
+.\"
+.TH "\FBKPACKAGETOOL5\FR" "1" "2017\-01\-03" "KDE Frameworks Frameworks 5.30" "KPackage-Verwaltung"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+kpackagetool5 \- Installieren, Auflisten und Entfernen von Plasma\-Paketen
+.SH "\(:UBERSICHT"
+.HP \w'\fBkpackagetool5\fR\ 'u
+\fBkpackagetool5\fR [\fB\-v, \-\-version\fR] [\fB\-h, \-\-help\fR] [\fB\-\-hash\fR\fI path\fR] [\fB\-g, \-\-global\fR] [\fB\-t, \-\-type\fR\fI type\fR] [\fB\-i, \-\-install\fR\fI path\fR] [\fB\-s, \-\-show\fR\fI name\fR] [\fB\-u, \-\-upgrade\fR\fI path\fR] [\fB\-l, \-\-list\fR] [\fB\-\-list\-types\fR] [\fB\-r, \-\-remove\fR\fI name\fR] [\fB\-p, \-\-packageroot\fR\fI path\fR] [\fB\-\-generate\-index\fR]
+.SH "BESCHREIBUNG"
+.PP
+\fBkpackagetool5\fR
+ist ein Befehlszeilenprogramm zum Installieren, Auflisten und Entfernen von
+Plasma\-Paketen\&.
+.SH "OPTIONEN"
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Zeigt Informationen \(:uber die Version an\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Zeigt diese Hilfe an\&.
+.RE
+.PP
+\fB\-\-hash\fR \fI path\fR
+.RS 4
+SHA1\-Hash f\(:ur das Paket in
+\(Bqpath\(lq
+generieren\&.
+.RE
+.PP
+\fB\-g, \-\-global\fR
+.RS 4
+Zum Installieren oder Entfernen, beeinflusst Plasma\-Pakete f\(:ur alle Benutzer\&.
+.RE
+.PP
+\fB\-t, \-\-type\fR \fI type\fR
+.RS 4
+Der Typ des Pakets, entspricht dem Servicetyp des Paket\-Moduls,
+z\&.\ \&B\&.
+KPackage/Generic, Plasma/Theme, Plasma/Wallpaper, Plasma/Applet,
+usw\&.
+.RE
+.PP
+\fB\-i, \-\-install\fR \fI path\fR
+.RS 4
+Paket von
+\(Bqpath\(lq
+installieren\&.
+.RE
+.PP
+\fB\-s, \-\-show\fR \fI name\fR
+.RS 4
+Informationen zum Paket
+\(Bqname\(lq
+anzeigen\&.
+.RE
+.PP
+\fB\-u, \-\-upgrade\fR \fI path\fR
+.RS 4
+Paket von
+\(Bqpath\(lq
+aktualisieren\&.
+.RE
+.PP
+\fB\-l, \-\-list\fR
+.RS 4
+Installierte Pakete anzeigen\&.
+.RE
+.PP
+\fB\-\-list\-types\fR
+.RS 4
+Zeigt alle Arten von Paketen an, die installiert werden k\(:onnen\&.
+.RE
+.PP
+\fB\-r, \-\-remove\fR \fI name\fR
+.RS 4
+Paket namens
+\(Bqname\(lq
+entfernen\&.
+.RE
+.PP
+\fB\-p, \-\-packageroot\fR \fI path\fR
+.RS 4
+Absoluter Pfad zum Paket\&. Falls nicht angegeben, werden die Standard\-Datenpfade dieser
+Plasma\-Sitzung durchsucht\&.
+.RE
+.PP
+\fB\-\-generate\-index\fR \fI path\fR
+.RS 4
+Erstellt den Index der Module neu\&. Kann zusammen mit den Optionen
+\fB\-t\fR
+oder
+\fB\-g\fR
+verwendet werden\&. Erstellt den Index f\(:ur den angegebenen Typ oder Basisordner des Pakets\&. Wird im Benutzerordner ausgef\(:uhrt, wenn nicht die Option
+\fB\-g\fR
+benutzt wird\&.
+.RE
+.SH "SIEHE AUCH"
+.PP
+Weitere ausf\(:uhrliche Dokumentation finden Sie unter
+\m[blue]\fBhelp:/plasma\-desktop\fR\m[]
+(geben Sie diese
+URL
+entweder im
+Konqueror
+ein oder starten Sie
+\fB\fBkhelpcenter\fR\fR\fB \fR\fB\fIhelp:/plasma\-desktop\fR\fR)\&.
+.SH "AUTOREN"
+.PP
+\fBkpackagetool5\fR
+wurde von
+Aaron Seigo<aseigo@kde\&.org>
+geschrieben\&.

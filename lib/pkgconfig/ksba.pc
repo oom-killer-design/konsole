@@ -1,0 +1,14 @@
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=C:/CraftRoot/lib
+host=x86_64-w64-mingw32
+api_version=1
+
+Name: ksba
+Description: X.509 and CMS support library
+Requires: gpg-error
+Version: 1.6.3-unknown
+Cflags: -I${includedir} 
+Libs: -L${libdir} -lksba
+URL: https://www.gnupg.org/related_software/libksba/

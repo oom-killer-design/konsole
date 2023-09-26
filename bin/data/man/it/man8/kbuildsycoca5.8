@@ -1,0 +1,143 @@
+'\" t
+.\"     Title: \fBkbuildsycoca5\fR
+.\"    Author: Darian Lanx <content@openprojects.net>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2015-09-17
+.\"    Manual: KDE Frameworks: KService
+.\"    Source: KDE Frameworks Frameworks 5.15
+.\"  Language: Italian
+.\"
+.TH "\FBKBUILDSYCOCA5\FR" "8" "2015\-09\-17" "KDE Frameworks Frameworks 5.15" "KDE Frameworks: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOME"
+kbuildsycoca5 \- Ricostruisce la cache della configurazione del filesystem di KService\&.
+.SH "SINTASSI"
+.HP \w'\fBkbuildsycoca5\fR\ 'u
+\fBkbuildsycoca5\fR [\fIOPZIONI\fR...]
+.SH "DESCRIZIONE"
+.PP
+\fBkbuildsycoca5\fR
+genera una cache binaria dei dati memorizzati nei file
+\&.desktop
+e file
+\&.xml
+di tipi
+MIME
+che l\*(Aqinfrastruttura KService usa per trovare estensioni, applicazioni e altri servizi\&.
+.PP
+La libreria KService usa questa banca dati per fornire efficacemente le informazioni richieste\&.
+.PP
+Gli utenti normalmente non devono eseguire questa applicazione direttamente; KService verr\(`a eseguito quando necessario, ogni volta che qualsiasi file i cui dati sono in cache viene modificato\&.
+.SH "OPZIONI"
+.PP
+\fB\-\-global\fR
+.RS 4
+Ignora tutti i file impostati dall\*(Aqutente (in
+\fIXDG_DATA_HOME\fR)\&. Questo \(`e attualmente supportato solo sui sistemi
+UNIX\(rg\&.
+.RE
+.PP
+\fB\-\-noincremental\fR
+.RS 4
+Invece di usare la cache attuale e aggiornare solo le informazioni che sono state modificate o aggiunte, comincia con una cache vuota\&. Viene ignorato se \(`e impostato
+\fB\-\-global\fR\&.
+.RE
+.PP
+\fB\-\-nosignal\fR
+.RS 4
+Normalmente,
+\fBkbuildsycoca5\fR
+invia un segnale via
+D\-Bus
+una volta che la cache \(`e stata modificata a tutte le applicazioni che usano KService, in modo che lavorino sempre con le informazioni pi\(`u recenti\&. Questa opzione sopprime questo comportamento\&.
+.RE
+.PP
+\fB\-\-menutest\fR
+.RS 4
+Fa una prova di generazione della banca dati dei menu delle applicazioni\&. Non genera realmente la cache\&.
+.RE
+.PP
+\fB\-\-testmode\fR
+.RS 4
+Usa la \(Fomodalit\(`a di prova\(Fc di QStandardPaths per evitare di interferire con i dati degli utenti\&. \(`E pensato per essere usato in prove di unit\(`a\&.
+.RE
+.PP
+\fB\-\-track \fR\fB\fIidentificativo_menu\fR\fR
+.RS 4
+Traccia un identificativo di menu per debug\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Mostra le informazioni sull\*(Aqautore\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Mostra le informazioni sulla licenza\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Mostra un breve testo di aiuto\&.
+.RE
+.PP
+\fB\-v , \-\-version\fR
+.RS 4
+Mostra le informazioni sulla versione\&.
+.RE
+.SH "FILE"
+.PP
+\fIcachedir\fR/ksycoca5_[lingua]_[sha1\-delle\-directory]
+.RS 4
+La cache di KService generata da
+\fBkbuildsycoca5\fR\&. Sui sistemi
+UNIX\(rg,
+\fIcachedir\fR
+\(`e tipicamente
+\fBXDG_CACHE_HOME\fR\&.
+.RE
+.SH "VEDI ANCHE"
+.PP
+\fBkded5\fR(8),
+\fBkdeinit5\fR(8)
+.SH "ERRORI"
+.PP
+Usa
+\m[blue]\fBil sito di gestione dei bug di KDE\fR\m[]\&\s-2\u[1]\d\s+2
+per segnalarli\&.
+.SH "AUTORI"
+.PP
+\fBDarian Lanx\fR <\&content@openprojects\&.net\&>
+.RS 4
+Ha scritto la documentazione originale\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Ha aggiornato la documentazione per KDE Frameworks 5\&.
+.RE
+.SH "NOTE"
+.IP " 1." 4
+il sito di gestione dei bug di KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

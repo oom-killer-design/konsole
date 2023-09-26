@@ -1,0 +1,130 @@
+'\" t
+.\"     Title: \fBkpackagetool5\fR
+.\"    Author: [see the "Auteurs" section]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 03-01-2017
+.\"    Manual: Gestion \(Fo\ \&KPackage\ \&\(Fc
+.\"    Source: Environnement de d\('eveloppement pour KDE Environnement de d\('eveloppement 5.30
+.\"  Language: French
+.\"
+.TH "\FBKPACKAGETOOL5\FR" "1" "03\-01\-2017" "Environnement de d\('eveloppement" "Gestion \(Fo\ \&KPackage\ \&\(Fc"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOM"
+kpackagetool5 \- Installer, lister, supprimer des paquets de Plasma
+.SH "SYNOPSIS"
+.HP \w'\fBkpackagetool5\fR\ 'u
+\fBkpackagetool5\fR [\fB\-v, \-\-version\fR] [\fB\-h, \-\-help\fR] [\fB\-\-hash\fR\fI emplacement\fR] [\fB\-g, \-\-global\fR] [\fB\-t, \-\-type\fR\fI type\fR] [\fB\-i, \-\-install\fR\fI emplacement\fR] [\fB\-s, \-\-show\fR\fI nom\fR] [\fB\-u, \-\-upgrade\fR\fI emplacement\fR] [\fB\-l, \-\-list\fR] [\fB\-\-list\-types\fR] [\fB\-r, \-\-remove\fR\fI nom\fR] [\fB\-p, \-\-packageroot\fR\fI emplacement\fR] [\fB\-\-generate\-index\fR]
+.SH "DESCRIPTION"
+.PP
+\fBkpackagetool5\fR
+est un outil en ligne de commandes pour installer, lister et supprimer des paquets de
+Plasma\&.
+.SH "OPTIONS"
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Affiche les informations\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Affiche cette aide\&.
+.RE
+.PP
+\fB\-\-hash\fR \fI emplacement\fR
+.RS 4
+G\('en\(`ere un somme de hachage SHA1 pour le paquet \(`a l\*(Aq\(Fo\ \&emplacement\ \&\(Fc\&.
+.RE
+.PP
+\fB\-g, \-\-global\fR
+.RS 4
+Pour installer ou supprimer, traite les paquets install\('es par les utilisateurs\&.
+.RE
+.PP
+\fB\-t, \-\-type\fR \fI type\fR
+.RS 4
+Le type de paquets, correspondant au type de service de module externe de paquets, par exemple KPackage\ \&/ G\('en\('erique, Plasma\ \&/ Th\(`eme, Plasma\ \&/ Fond d\*(Aq\('ecran, Plasma\ \&/ Composant graphique,
+etc\&.\&.
+.RE
+.PP
+\fB\-i, \-\-install\fR \fI emplacement\fR
+.RS 4
+Install le paquet \(`a l\*(Aq\(Fo\ \&emplacement\ \&\(Fc\&.
+.RE
+.PP
+\fB\-s, \-\-show\fR \fI nom\fR
+.RS 4
+Affiche les informations sur le paquet
+\(Fo\ \&nom\ \&\(Fc\&.
+.RE
+.PP
+\fB\-u, \-\-upgrade\fR \fI emplacement\fR
+.RS 4
+Met \(`a jour le paquet \(`a l\*(Aq\(Fo\ \&emplacement\ \&\(Fc\&.
+.RE
+.PP
+\fB\-l, \-\-list\fR
+.RS 4
+Liste les paquets install\('es\&.
+.RE
+.PP
+\fB\-\-list\-types\fR
+.RS 4
+Liste tous les types connus de paquets pouvant \(^etre install\('e
+.RE
+.PP
+\fB\-r, \-\-remove\fR \fI nom\fR
+.RS 4
+Supprime le paquet nomm\('e
+\(Fo\ \&nom\ \&\(Fc\&.
+.RE
+.PP
+\fB\-p, \-\-packageroot\fR \fIemplacement\fR
+.RS 4
+Emplacement absolu de la racine du paquet\&. S\*(Aqil n\*(Aqest pas fourni, alors, les emplacements standards de donn\('ees pour cette session de
+Plasma
+seront recherch\('es \(`a la place\&.
+.RE
+.PP
+\fB\-\-generate\-index\fR \fI emplacement\fR
+.RS 4
+Re\-g\('en\(`ere l\*(Aqindex des modules externes\&. A utiliser en conjonction soit de l\*(Aqoption
+\fB\-t\fR
+ou
+\fB\-g\fR\&. Re\-g\('en\(`ere l\*(Aqindex pour le type donn\('e ou une racine du paquet\&. Fonctionne dans le dossier de l\*(Aqutilisateur, sauf si l\*(Aqoption
+\fB\-g\fR
+est utilis\('ee\&.
+.RE
+.SH "VOIR AUSSI"
+.PP
+Une documentation utilisateur plus d\('etaill\('ee est disponible \(`a l\*(Aqadresse
+\m[blue]\fBhelp:/plasma\-desktop\fR\m[]
+(soit, saisissez cette
+URL
+dans
+Konqueror
+ou lancer
+\fB\fBkhelpcenter\fR\fR\fB \fR\fB\fIhelp:/plasma\-desktop\fR\fR)\&.
+.SH "AUTEURS"
+.PP
+\fBkpackagetool5\fR
+a \('et\('e \('ecrit par
+Aaron Seigo<aseigo@kde\&.org>\&.

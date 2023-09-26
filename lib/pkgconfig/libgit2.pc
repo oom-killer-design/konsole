@@ -1,0 +1,11 @@
+prefix="C:/CraftRoot"
+libdir="C:/CraftRoot/lib"
+includedir="C:/CraftRoot/include"
+
+Name: libgit2
+Description: The git library, take 2
+Version: 1.7.1
+Libs: -L${libdir} -lgit2
+Libs.private: -lrpcrt4 -lcrypt32 -lole32 -lsecur32
+Requires.private: libpcre2-8 zlib
+Cflags: -I${includedir} 

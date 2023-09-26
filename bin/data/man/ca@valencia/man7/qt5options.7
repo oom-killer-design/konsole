@@ -1,0 +1,193 @@
+'\" t
+.\"     Title: qt5options
+.\"    Author: Watts, Lauri <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 4 de juny de 2016
+.\"    Manual: Documentaci\('o de la l\('inia d'ordres de les Qt
+.\"    Source: Frameworks de KDE Qt 5.4
+.\"  Language: Catalan
+.\"
+.TH "QT5OPTIONS" "7" "4 de juny de 2016" "Frameworks de KDE Qt 5.4" "Documentaci\('o de la l\('inia d'ord"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOM"
+qt5options \- Opcions comunes de la l\('inia d\*(Aqordres per a totes les aplicacions basades en el joc d\*(Aqeines de les Qt(TM)
+.SH "SINOPSI"
+.HP \w'\fB\fIAplicaci\('o\ Qt\fR\fR\ 'u
+\fB\fIAplicaci\('o Qt\fR\fR [\fB\-style=\fR\ \fIestil\fR\ /\ \fB\-style\fR\ \fIestil\fR] [\fB\-stylesheet=\fR\ \fIfull\ d\*(Aqestil\fR\ /\ \fB\-stylesheet\fR\ \fIfull\ d\*(Aqestil\fR] [\fB\-widgetcount\fR] [\fB\-reverse\fR] [\fB\-qmljsdebugger=\fR\ \fIport\fR] [\fB\-platform\fR\ \fInom_plataforma[:opcions]\fR] [\fB\-platformpluginpath\fR\ \fIcam\('i\fR] [\fB\-platformtheme\fR\ \fItema_plataforma\fR] [\fB\-plugin\fR\ \fIconnector\fR] [\fB\-qwindowgeometry\fR\ \fIgeometria\fR] [\fB\-qwindowicon\fR\ \fIicona\fR] [\fB\-qwindowtitle\fR\ \fIt\('itol\fR] [\fB\-reverse\fR] [\fB\-session\fR\ \fIsessi\('o\fR] [\fB\-display\fR\ \fInom_amfitri\('o:n\('umero_pantalla\fR] [\fB\-geometry\fR\ \fIgeometria\fR] [\fB\-dialogs=\fR\ \fI[xp|none]\fR] [\fB\-fontengine=\fR\ \fIfreetype\fR] [\fB\-h,\ \-\-help\ i\ \-?\ a\ \fR\fBWindows\(rg\fR] [\fB\-v\ \-\-version\fR]
+.SH "OPCIONS"
+.PP
+Les opcions seg\(:uents s\*(Aqapliquen a totes les aplicacions
+Qt(TM):
+.PP
+\fB\-style=\fR \fIestil\fR / \fB\-style\fR \fIestil\fR
+.RS 4
+Establir l\*(Aqestil de la
+IGU
+de l\*(Aqaplicaci\('o\&. Els valors possibles dependran de la Configuraci\('o del sistema\&. Si les
+Qt(TM)
+han sigut compilades amb estils addicionals o si disposeu d\*(Aqestils addicionals com a connectors els quals estaran disponibles per a l\*(Aqopci\('o
+\fB\-style\fR
+de la l\('inia d\*(Aqordres\&.
+.RE
+.PP
+\fB\-stylesheet=\fR \fIfull d\*(Aqestil\fR / \fB\-stylesheet\fR \fIfull d\*(Aqestil\fR
+.RS 4
+Establix el full d\*(Aqestil de l\*(Aqaplicaci\('o\&. El valor haur\(`a de ser un cam\('i d\*(Aqacc\('es a un fitxer que continga el full d\*(Aqestil\&.
+.RE
+.PP
+\fB\-widgetcount\fR
+.RS 4
+Imprimix un missatge de depuraci\('o al final sobre el nombre de ginys no destru\(:its a l\*(Aqesquerra i el nombre m\(`axim de ginys existents, tot alhora\&.
+.RE
+.PP
+\fB\-reverse\fR
+.RS 4
+Establix la direcci\('o de la disposici\('o de l\*(Aqaplicaci\('o a
+Qt::RightToLeft\&. Esta opci\('o est\(`a destinada a ajudar a depurar i no s\*(Aqha d\*(Aqutilitzar en producci\('o\&. El valor predeterminat \('es detectat autom\(`aticament de la configuraci\('o regional de l\*(Aqusuari (vegeu tamb\('e
+QLocale::textDirection())\&.
+.RE
+.PP
+\fB\-qmljsdebugger=\fR \fIport\fR
+.RS 4
+Activa el depurador de QML/JS amb un port especificat\&. El valor haur\(`a d\*(Aqestar format per port:1234[,bloc], on el bloc \('es opcional i fa que l\*(Aqaplicaci\('o espere fins que un depurador es connecta amb ella\&.
+.RE
+.PP
+\fB\-platform\fR \fInom_plataforma[:opcions]\fR
+.RS 4
+Especifica el connector d\*(Aqabstracci\('o de la plataforma
+Qt(TM)
+(QPA \-Qt Platform Abstraction\-)\&.
+.RE
+.PP
+\fB\-platformpluginpath\fR \fIcam\('i\fR
+.RS 4
+Especifica el cam\('i dels connectors a la plataforma\&.
+.RE
+.PP
+\fB\-platformtheme\fR \fItema_plataforma\fR
+.RS 4
+Especifica el tema de la plataforma\&.
+.RE
+.PP
+\fB\-plugin\fR \fIconnector\fR
+.RS 4
+Especifica els connectors addicionals que es carregaran\&. L\*(Aqargument pot apar\('eixer m\('ultiples vegades\&.
+.RE
+.PP
+\fB\-qwindowgeometry\fR \fIgeometria\fR
+.RS 4
+Especifica la geometria de la finestra per a la finestra principal emprant la sintaxi de
+X11\&. Per exemple: \-qwindowgeometry 100x100+50+50
+.RE
+.PP
+\fB\-qwindowicon\fR \fIicona\fR
+.RS 4
+Establix la icona predeterminada de la finestra\&.
+.RE
+.PP
+\fB\-qwindowtitle\fR \fIt\('itol\fR
+.RS 4
+Establix el t\('itol de la primera finestra\&.
+.RE
+.PP
+\fB\-session\fR \fIsessi\('o\fR
+.RS 4
+Restaura l\*(Aqaplicaci\('o des d\*(Aquna sessi\('o anterior\&.
+.RE
+.PP
+\fB\-display\fR \fInom_amfitri\('o:n\('umero_pantalla\fR
+.RS 4
+Canvia les visualitzacions a
+X11\&. Anul\(mdla la variable d\*(Aqentorn
+\fBDISPLAY\fR\&.
+.RE
+.PP
+\fB\-geometry\fR \fIgeometria\fR
+.RS 4
+Especifica la geometria de la finestra per a la finestra principal a
+X11\&. Per exemple: \-geometry 100x100+50+50
+.RE
+.PP
+\fB\-dialogs=\fR \fI[xp|none]\fR
+.RS 4
+Nom\('es estar\(`a disponible per a les plataformes de
+Windows\(rg\&. XP utilitza di\(`alegs en l\*(Aqestil nadiu i cap (none) els desactiva\&.
+.RE
+.PP
+\fB\-fontengine=\fR \fIfreetype\fR
+.RS 4
+Utilitza el motor de tipus de lletra FreeType\&.
+.RE
+.PP
+\fB\-h, \-\-help i \-? a \fR\fBWindows\(rg\fR
+.RS 4
+Imprimix totes les opcions i la descripci\('o de l\*(Aqaplicaci\('o\&.
+.RE
+.PP
+\fB\-v \-\-version\fR
+.RS 4
+Mostra la cadena sobre la versi\('o de l\*(Aqaplicaci\('o\&.
+.RE
+.SH "VEGEU TAMB\('E"
+.PP
+\fIkf5options\fR(7)
+.SH "AUTORIA"
+.PP
+P\(`agina de manual original escrita per en
+Watts, Lauri<lauri@kde\&.org>
+.PP
+Actualitzada als
+Frameworks
+5 per en
+L\(:uck, Burkhard<lueck@hube\-lueck\&.de>
+.PP
+La informaci\('o d\*(Aqesta p\(`agina del manual \('es de la
+\m[blue]\fBdocumentaci\('o de QApplication\fR\m[]\&\s-2\u[1]\d\s+2, la
+\m[blue]\fBdocumentaci\('o de QGuiApplication\fR\m[]\&\s-2\u[2]\d\s+2
+i la
+\m[blue]\fBdocumentaci\('o de QCommandLineParser\fR\m[]\&\s-2\u[3]\d\s+2\&.
+.SH "AUTORS"
+.PP
+\fBWatts, Lauri\fR <\&lauri@kde\&.org\&>
+.RS 4
+Autor.
+.RE
+.PP
+\fBL\(:uck, Burkhard\fR <\&lueck@hube\-lueck\&.de\&>
+.RS 4
+Autor.
+.RE
+.SH "NOTES"
+.IP " 1." 4
+documentaci\('o de QApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qapplication.html#QApplication
+.RE
+.IP " 2." 4
+documentaci\('o de QGuiApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication
+.RE
+.IP " 3." 4
+documentaci\('o de QCommandLineParser
+.RS 4
+\%https://doc.qt.io/qt-5/qcommandlineparser.html
+.RE

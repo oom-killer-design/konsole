@@ -1,0 +1,14 @@
+prefix=C:/CraftRoot
+exec_prefix=C:/CraftRoot
+libdir=C:/CraftRoot/lib
+includedir=C:/CraftRoot/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 24.3.18
+Requires: 
+Requires.private: zlib, libpng
+Libs: -LC:/CraftRoot/lib -lfreetype
+Libs.private: -lbz2
+Cflags: -I${includedir}/freetype2

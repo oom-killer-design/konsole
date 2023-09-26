@@ -1,0 +1,139 @@
+'\" t
+.\"     Title: \fBkbuildsycoca5\fR
+.\"    Author: Darian Lanx <content@openprojects.net>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 17-09-2015
+.\"    Manual: KDE Frameworks\ \&: \(Fo\ \&KService\ \&\(Fc
+.\"    Source: Environnement de d\('eveloppement de KDE Environnement de d\('eveloppement 5.15 de KDE
+.\"  Language: French
+.\"
+.TH "\FBKBUILDSYCOCA5\FR" "8" "17\-09\-2015" "Environnement de d\('eveloppement" "KDE Frameworks\ \&: \(Fo\ \&KService\ \&\(Fc"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOM"
+kbuildsycoca5 \- Reconstruit le cache de configuration du syst\(`eme de fichiers de bureau pour \(Fo\ \&KService\ \&\(Fc\&.
+.SH "SYNOPSIS"
+.HP \w'\fBkbuildsycoca5\fR\ 'u
+\fBkbuildsycoca5\fR [\fIOPTIONS\fR...]
+.SH "DESCRIPTION"
+.PP
+\fBkbuildsycoca5\fR
+compile le cache binaire enregistr\('e dans les fichiers
+\&.desktop
+et les types
+MIME\&.xmlque l\*(Aqenvironnement de d\('eveloppement de \(Fo\ \&KService\ \&\(Fc utilise pour trouver les modules externes, les applications et les autres services\&.
+.PP
+La biblioth\(`eque \(Fo\ \&KService\ \&\(Fc utilise cette base de donn\('ees pour fournir efficacement des informations qui lui sont n\('ecessaires\&.
+.PP
+Les utilisateurs n\*(Aqont normalement pas besoin de lancer cette application directement\&. KService ne se lancera que si n\('ecessaire, quand l\*(Aqun des fichiers dont les donn\('ees sont en cache est modifi\('e\&.
+.SH "OPTIONS"
+.PP
+\fB\-\-global\fR
+.RS 4
+Ignore tout fichier personnalis\('e par l\*(Aqutilisateur (dans
+\fIXDG_DATA_HOME\fR)\&. Ceci n\*(Aqest pris en charge que pour les syst\(`emes
+UNIX\(rg\&.
+.RE
+.PP
+\fB\-\-noincremental\fR
+.RS 4
+Plut\(^ot que d\*(Aqutiliser le cache existant et uniquement r\('ealiser une mise \(`a jour des informations modifi\('ees ou ajout\('ees, d\('emarrez avec un cache vide\&. Ignor\('e si l\*(Aqoption
+\fB\-\-global\fR
+est d\('efinie\&.
+.RE
+.PP
+\fB\-\-nosignal\fR
+.RS 4
+Normalement,
+\fBkbuildsyscoca5\fR
+envoie un signal sur le
+D\-Bus, une fois que le cache est mis \(`a jour pour toutes les applications utilisant \(Fo\ \&KService\ \&\(Fc\&. Ainsi, elles fonctionnent en utilisant la derni\(`ere information\&. Cette option supprime ce comportement\&.
+.RE
+.PP
+\fB\-\-menutest\fR
+.RS 4
+Teste la g\('en\('eration d\*(Aqune base de donn\('ees de menus pour une application\&. Ne compile pas actuellement le cache\&.
+.RE
+.PP
+\fB\-\-testmode\fR
+.RS 4
+Utilise le \(Fo\ \&Mode de test\ \&\(Fc \(Fo\ \&QStandardPaths\ \&\(Fc pour \('eviter des interf\('erences avec les donn\('ees de l\*(Aqutilisateur\&. Ceci est pr\('evu pour une utilisation en tests unitaires\&.
+.RE
+.PP
+\fB\-\-track \fR\fB\fImenu\-id\fR\fR
+.RS 4
+Tracer l\*(Aqidentifiant de menu pour le d\('ebogage\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Afficher les informations sur l\*(Aqauteur\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Afficher les informations sur la licence\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Affiche un texte succinct d\*(Aqaide\&.
+.RE
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Afficher les informations de version
+.RE
+.SH "FICHIERS"
+.PP
+\fIcachedir\fR/ksycoca5_[lang]_[sha1\-of\-dirs]
+.RS 4
+Le cache de \(Fo\ \&KService\ \&\(Fc est g\('en\('er\('e par
+\fBkbuildsycoca5\fR\&. Sur des syst\(`emes
+UNIX\(rg,
+\fIcachedir\fR
+est g\('en\('eralement
+\fBXDG_CONFIG_HOME\fR\&.
+.RE
+.SH "VOIR AUSSI"
+.PP
+\fBkded5\fR(8),
+\fBkdeinit5\fR(8)
+.SH "BOGUES"
+.PP
+Veuillez utiliser le\m[blue]\fBle traqueur de bogues de KDE\fR\m[]\&\s-2\u[1]\d\s+2
+pour les signaler\&.
+.SH "AUTEURS"
+.PP
+\fBDarian Lanx\fR <\&content@openprojects\&.net\&>
+.RS 4
+A \('ecrit la documentation initiale\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Mis \(`a jour avec la documentation de KDE Frameworks 5\&.
+.RE
+.SH "NOTES"
+.IP " 1." 4
+le traqueur de bogues de KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

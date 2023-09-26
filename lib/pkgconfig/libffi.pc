@@ -1,0 +1,11 @@
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+libdir=C:/CraftRoot/lib
+toolexeclibdir=${libdir}
+includedir=${prefix}/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.3
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

@@ -1,0 +1,188 @@
+'\" t
+.\"     Title: qt5options
+.\"    Author: Lauri Watts <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2016-06-04
+.\"    Manual: Kommandoradsdokumentation f\(:or Qt
+.\"    Source: KDE Ramverk Qt 5.4
+.\"  Language: Swedish
+.\"
+.TH "QT5OPTIONS" "7" "2016\-06\-04" "KDE Ramverk Qt 5.4" "Kommandoradsdokumentation f\(:or"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAMN"
+qt5options \- Gemensamma kommandoradsv\(:aljare f\(:or alla program som \(:ar baserade p\(oa Qt(TM)\-verktygsl\(oadan
+.SH "SYNOPSIS"
+.HP \w'\fB\fIQt\-program\fR\fR\ 'u
+\fB\fIQt\-program\fR\fR [\fB\-style=\fR\ \fIstil\fR\ /\ \fB\-style\fR\ \fIstil\fR] [\fB\-stylesheet=\fR\ \fIstilmall\fR\ /\ \fB\-stylesheet\fR\ \fIstilmall\fR] [\fB\-widgetcount\fR] [\fB\-reverse\fR] [\fB\-qmljsdebugger=\fR\ \fIport\fR] [\fB\-platform\fR\ \fIplattformsnamn[:alternativ]\fR] [\fB\-platformpluginpath\fR\ \fIs\(:okv\(:ag\fR] [\fB\-platformtheme\fR\ \fIplattformstema\fR] [\fB\-plugin\fR\ \fIinsticksmodul\fR] [\fB\-qwindowgeometry\fR\ \fIgeometri\fR] [\fB\-qwindowicon\fR\ \fIikon\fR] [\fB\-qwindowtitle\fR\ \fInamn\fR] [\fB\-reverse\fR] [\fB\-session\fR\ \fIsession\fR] [\fB\-display\fR\ \fIv\(:arddatornamn:sk\(:armnummer\fR] [\fB\-geometry\fR\ \fIgeometri\fR] [\fB\-dialogs=\fR\ \fI[xp|none]\fR] [\fB\-fontengine=\fR\ \fIfreetype\fR] [\fB\-h,\ \-\-help\ och\ \-?\ p\(oa\ \fR\fBWindows\(rg\fR] [\fB\-v\ \-\-version\fR]
+.SH "V\(:ALJARE"
+.PP
+F\(:oljande v\(:aljare g\(:aller alla program som anv\(:ander
+Qt(TM):
+.PP
+\fB\-style=\fR \fIstil\fR / \fB\-style\fR \fIstil\fR
+.RS 4
+St\(:all in stilen f\(:or programmets grafiska anv\(:andargr\(:anssnitt\&. M\(:ojliga v\(:arden beror p\(oa systeminst\(:allningen\&. Om
+Qt(TM)
+kompileras med ytterligare stilar eller har ytterligare stilar som insticksmoduler \(:ar de tillg\(:angliga f\(:or kommandoradsv\(:aljaren
+\fB\-style\fR\&.
+.RE
+.PP
+\fB\-stylesheet=\fR \fIstilmall\fR / \fB\-stylesheet\fR \fIstilmall\fR
+.RS 4
+St\(:all in programmets stilmall\&. V\(:ardet m\(oaste vara en s\(:okv\(:ag till en fil som inneh\(oaller stilmallen\&.
+.RE
+.PP
+\fB\-widgetcount\fR
+.RS 4
+Skriv ut fels\(:okningsmeddelanden i slutet om antal of\(:orst\(:orda grafiska komponenter som \(:ar kvar och maximalt antal grafiska komponenter som existerade samtidigt\&.
+.RE
+.PP
+\fB\-reverse\fR
+.RS 4
+St\(:all in programmets layoutriktning till
+Qt::RightToLeft\&. Alternativet \(:ar avsett att hj\(:alpa till vid fels\(:okning och ska inte anv\(:andas i produktion\&. Standardv\(:ardet detekteras automatiskt fr\(oan anv\(:andarens landsinst\(:allningar (se ocks\(oa
+QLocale::textDirection())\&.
+.RE
+.PP
+\fB\-qmljsdebugger=\fR \fIport\fR
+.RS 4
+Aktive QML/JS\-avlusare med en angiven port\&. V\(:ardet m\(oaste ha formatet port:1234[,block], d\(:ar block \(:ar valfritt och g\(:or att programmet v\(:antar till avlusaren ansluter till den\&.
+.RE
+.PP
+\fB\-platform\fR \fIplattformsnamn[:alternativ]\fR
+.RS 4
+Ange insticksmodulen
+Qt(TM)
+Platform Abstraction (QPA)\&.
+.RE
+.PP
+\fB\-platformpluginpath\fR \fIs\(:okv\(:ag\fR
+.RS 4
+Ange s\(:okv\(:agen till plattformens insticksmoduler\&.
+.RE
+.PP
+\fB\-platformtheme\fR \fIplattformstema\fR
+.RS 4
+Ange plattformens tema\&.
+.RE
+.PP
+\fB\-plugin\fR \fIinsticksmodul\fR
+.RS 4
+Ange ytterligare insticksmoduler att ladda\&. Argumentet kan anv\(:andas flera g\(oanger\&.
+.RE
+.PP
+\fB\-qwindowgeometry\fR \fIgeometri\fR
+.RS 4
+Ange f\(:onstergeometri f\(:or huvudf\(:onstret med
+X11\-syntax\&. Exempelvis: \-qwindowgeometry 100x100+50+50
+.RE
+.PP
+\fB\-qwindowicon\fR \fIikon\fR
+.RS 4
+St\(:all in f\(:orvald f\(:onsterikon\&.
+.RE
+.PP
+\fB\-qwindowtitle\fR \fInamn\fR
+.RS 4
+St\(:all in det f\(:orsta f\(:onstrets namn\&.
+.RE
+.PP
+\fB\-session\fR \fIsession\fR
+.RS 4
+\(oAterst\(:all programmet fr\(oan en tidigare session\&.
+.RE
+.PP
+\fB\-display\fR \fIv\(:arddatornamn:sk\(:armnummer\fR
+.RS 4
+Byt sk\(:arm p\(oa
+X11\&. \(:Overskrider milj\(:ovariabeln
+\fBDISPLAY\fR\&.
+.RE
+.PP
+\fB\-geometry\fR \fIgeometri\fR
+.RS 4
+Ange f\(:onstergeometri f\(:or huvudf\(:onstret p\(oa
+X11\&. Exempelvis: \-geometry 100x100+50+50\&.
+.RE
+.PP
+\fB\-dialogs=\fR \fI[xp|none]\fR
+.RS 4
+Bara tillg\(:anglig f\(:or plattformen
+Windows\(rg\&. XP anv\(:ander inbyggda dialogrutor och none inaktiverar dem\&.
+.RE
+.PP
+\fB\-fontengine=\fR \fIfreetype\fR
+.RS 4
+Anv\(:and teckensnittsverktyget FreeType\&.
+.RE
+.PP
+\fB\-h, \-\-help och \-? p\(oa \fR\fBWindows\(rg\fR
+.RS 4
+Skriv ut alla alternativ och programmets beskrivning\&.
+.RE
+.PP
+\fB\-v \-\-version\fR
+.RS 4
+Visa programmets versionsstr\(:ang\&.
+.RE
+.SH "SE OCKS\(oA"
+.PP
+\fIkf5options\fR(7)
+.SH "UPPHOVSM\(:AN"
+.PP
+Manualsidan ursprungligen skriven av
+Lauri Watts<lauri@kde\&.org>
+.PP
+Uppdaterad till Ramverk 5 av
+Burkhard L\(:uck<lueck@hube\-lueck\&.de>
+.PP
+Informationen f\(:or den h\(:ar manualsidan \(:ar fr\(oan
+\m[blue]\fBdokumentationen f\(:or QApplication\fR\m[]\&\s-2\u[1]\d\s+2,
+\m[blue]\fBdokumentationen f\(:or QGuiApplication\fR\m[]\&\s-2\u[2]\d\s+2
+och
+\m[blue]\fBdokumentationen f\(:or QCommandLineParser\fR\m[]\&\s-2\u[3]\d\s+2\&.
+.SH "AUTHORS"
+.PP
+\fBLauri Watts\fR <\&lauri@kde\&.org\&>
+.RS 4
+Author.
+.RE
+.PP
+\fBBurkhard L\(:uck\fR <\&lueck@hube\-lueck\&.de\&>
+.RS 4
+Author.
+.RE
+.SH "NOTER"
+.IP " 1." 4
+dokumentationen f\(:or QApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qapplication.html#QApplication
+.RE
+.IP " 2." 4
+dokumentationen f\(:or QGuiApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication
+.RE
+.IP " 3." 4
+dokumentationen f\(:or QCommandLineParser
+.RS 4
+\%https://doc.qt.io/qt-5/qcommandlineparser.html
+.RE

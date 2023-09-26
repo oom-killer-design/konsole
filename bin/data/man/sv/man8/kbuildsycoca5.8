@@ -1,0 +1,141 @@
+'\" t
+.\"     Title: \fBkbuildsycoca5\fR
+.\"    Author: Darian Lanx <content@openprojects.net>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2015-09-17
+.\"    Manual: KDE-ramverk: KService
+.\"    Source: KDE Ramverk Ramverk 5.15
+.\"  Language: Swedish
+.\"
+.TH "\FBKBUILDSYCOCA5\FR" "8" "2015\-09\-17" "KDE Ramverk Ramverk 5.15" "KDE-ramverk: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAMN"
+kbuildsycoca5 \- Bygger om systemets inst\(:allningscache f\(:or KService skrivbordsfiler
+.SH "\(:OVERSIKT"
+.HP \w'\fBkbuildsycoca5\fR\ 'u
+\fBkbuildsycoca5\fR [\fIV\(:ALJARE\fR...]
+.SH "BESKRIVNING"
+.PP
+\fBkbuildsycoca5\fR
+skapar en bin\(:ar cache av data lagrad i
+\&.desktop\- och
+MIME\-typ
+\&.xml\-filer som KService ramverk anv\(:ander f\(:or att hitta insticksprogram, program och andra tj\(:anster\&.
+.PP
+KService\-biblioteket anv\(:ander databasen f\(:or att tillhandah\(oalla informationen som beg\(:ars av det p\(oa ett effektivt s\(:att\&.
+.PP
+Anv\(:andare beh\(:over normalt inte k\(:ora programmet direkt: KService k\(:ors vid behov, s\(oa fort n\(oagon av filerna vars data \(:ar lagrad \(:andras\&.
+.SH "V\(:ALJARE"
+.PP
+\fB\-\-global\fR
+.RS 4
+Ignorerar eventuella anv\(:andarangivna filer (i
+\fIXDG_DATA_HOME\fR)\&. Det st\(:ods f\(:or n\(:arvarande bara p\(oa
+UNIX\(rg\-system\&.
+.RE
+.PP
+\fB\-\-noincremental\fR
+.RS 4
+Starta med en tom cache ist\(:allet f\(:or att anv\(:anda den befintliga cachen och bara uppdatera informationen som har \(:andrats eller lagts till\&. Ignoreras om
+\fB\-\-global\fR
+anges\&.
+.RE
+.PP
+\fB\-\-nosignal\fR
+.RS 4
+Normalt skickar
+\fBkbuildsycoca5\fR
+en signal till alla program som anv\(:ander KService via
+D\-Bus
+n\(:ar cachen v\(:al har uppdaterats, s\(oa att de alltid arbetar med den senaste informationen\&. V\(:aljaren f\(:orhindrar detta beteende\&.
+.RE
+.PP
+\fB\-\-menutest\fR
+.RS 4
+Prova generering av databasen f\(:or programmenyn\&. Skapar i sj\(:alva verket inte cachen\&.
+.RE
+.PP
+\fB\-\-testmode\fR
+.RS 4
+Anv\(:ander \*(Aqprovl\(:age\*(Aq i QStandardPaths f\(:or att undvika att p\(oaverka anv\(:andardata\&. Det \(:ar avsett att anv\(:andas med enhetsutprovning\&.
+.RE
+.PP
+\fB\-\-track \fR\fB\fImeny\-id\fR\fR
+.RS 4
+Sp\(oara en menyidentifikation i fels\(:okningssyfte\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Visa information om upphovsman\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Visa licensinformation\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Visa en kortfattad hj\(:alptext\&.
+.RE
+.PP
+\fB\-v , \-\-version\fR
+.RS 4
+Visa versionsinformation\&.
+.RE
+.SH "FILER"
+.PP
+\fIcache\-katalog\fR/ksycoca5_[spr\(oak]_[sha1 av kataloger]
+.RS 4
+KService\-cachen som genereras av
+\fBkbuildsycoca5\fR\&. P\(oa
+UNIX\(rg\-system, \(:ar
+\fIcache\-katalog\fR
+typiskt
+\fBXDG_CACHE_HOME\fR
+.RE
+.SH "SE OCKS\(oA"
+.PP
+\fBkded5\fR(8),
+\fBkdeinit5\fR(8)
+.SH "FEL"
+.PP
+Anv\(:and
+\m[blue]\fBKDE:s felsp\(oarningssystem\fR\m[]\&\s-2\u[1]\d\s+2
+f\(:or att rapportera fel\&.
+.SH "AUTHORS"
+.PP
+\fBDarian Lanx\fR <\&content@openprojects\&.net\&>
+.RS 4
+Skrev originaldokumentationen\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Uppdaterade dokumentationen f\(:or KDE Ramverk 5\&.
+.RE
+.SH "NOTER"
+.IP " 1." 4
+KDE:s felsp\(oarningssystem
+.RS 4
+\%https://bugs.kde.org
+.RE

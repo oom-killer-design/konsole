@@ -1,0 +1,12 @@
+
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: sqlite3
+Description: sqlite3 library.
+Version: 3.42.0
+Libs: -L${prefix}/lib -lsqlite3
+Cflags: -I${prefix}/include 
+Requires: 

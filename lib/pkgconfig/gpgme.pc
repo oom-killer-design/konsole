@@ -1,0 +1,14 @@
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=C:/CraftRoot/lib
+host=x86_64-w64-mingw32
+api_version=1
+
+Name: gpgme
+Description: GnuPG Made Easy to access GnuPG
+Requires.private: gpg-error, libassuan
+Version: 1.21.0-unknown
+Cflags: -I${includedir}
+Libs: -L${libdir} -lgpgme
+URL: https://www.gnupg.org/software/gpgme/index.html

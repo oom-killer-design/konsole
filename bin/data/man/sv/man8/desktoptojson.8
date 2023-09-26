@@ -1,0 +1,129 @@
+'\" t
+.\"     Title: \fBdesktoptojson\fR
+.\"    Author: Scarlett Clark <scarlett@scarlettgatelyclark.com>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2014-04-02
+.\"    Manual: KDE-ramverk: KService
+.\"    Source: KDE Ramverk Ramverk 5.0
+.\"  Language: Swedish
+.\"
+.TH "\FBDESKTOPTOJSON\FR" "8" "2014\-04\-02" "KDE Ramverk Ramverk 5.0" "KDE-ramverk: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAMN"
+desktoptojson \- Konverterar en \&.desktop\-fil till en \&.json\-fil\&.
+.SH "\(:OVERSIKT"
+.HP \w'\fBdesktoptojson\fR\ 'u
+\fBdesktoptojson\fR \-\-input\ \fISKRIVBORDSFIL\fR \-\-output\ \fIJSON\-FIL\fR
+.HP \w'\fBdesktoptojson\fR\ 'u
+\fBdesktoptojson\fR {\-\-version | \-\-help}
+.SH "BESKRIVNING"
+.PP
+KService\-ramverket anv\(:ander information som finns i
+\&.desktop\-filer f\(:or att hitta tj\(:anster, inklusive insticksprogram f\(:or Qt5\-baserade program och bibliotek\&. Qt5\-instickssystemet anv\(:ander dock
+JSON\-data inb\(:addad i sj\(:alva insticksprogrammet\&.
+\fBdesktoptojson\fR
+g\(:or det m\(:ojligt att ocks\(oa anv\(:anda informationen som finns i en
+\&.desktop\-fil som inb\(:addad data f\(:or ett Qt5\-insticksprogram genom att konvertera
+\&.desktop\-filens poster till
+JSON\-data\&.
+.PP
+Skapad
+JSON\-data \(:ar ett
+JSON\-objekt som avbildar posterna fr\(oan gruppen
+[Desktop Entry]
+i
+\&.desktop\-filen\&. Alla andra grupper ignoreras\&. De flesta poster konverteras bara till
+JSON\-str\(:angar, men f\(:or vissa poster (s\(oasom
+Hidden
+and
+X\-KDE\-PluginInfo\-EnabledByDefault) \(:ar det k\(:ant att de \(:ar Booleska v\(:arden, och de konverteras som s\(oadana\&. P\(oa liknande s\(:att konverteras vissa andra (s\(oasom
+X\-KDE\-ServiceTypes
+och
+X\-KDE\-PluginInfo\-Depends) alltid som f\(:alt av str\(:angar\&.
+.SH "V\(:ALJARE"
+.PP
+\fB\-\-input \fR\fB\fISKRIVBORDSFIL\fR\fR
+.RS 4
+\&.desktop\-filen att konvertera\&.
+.RE
+.PP
+\fB\-\-output \fR\fB\fIJSON\-FIL\fR\fR
+.RS 4
+Filen dit genererad
+JSON\-data ska skrivas\&.
+.RE
+.PP
+\fB\-\-help\fR
+.RS 4
+Visa en kortfattad hj\(:alptext\&.
+.RE
+.PP
+\fB\-\-version\fR
+.RS 4
+Visa versionsinformation\&.
+.RE
+.SH "ANV\(:ANDNING"
+.PP
+De flesta anv\(:andare av verktyget kommer att anv\(:anda
+CMake\-makrot
+\fBkservice_desktop_to_json\fR
+som en del av processen n\(:ar ett insticksprogram byggs\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+
+add_library(myplugin MODULE ${myplugin_SRCS})
+kservice_desktop_to_json(myplugin myplugin\&.desktop)
+
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+Det skapar JSON\-filen
+myplugin\&.json, som kan refereras i makrot
+\fBK_PLUGIN_FACTORY_WITH_JSON\fR
+eller
+\fBQ_PLUGIN_METADATA\fR\&.
+.SH "FEL"
+.PP
+Anv\(:and
+\m[blue]\fBKDE:s felsp\(oarningssystem\fR\m[]\&\s-2\u[1]\d\s+2
+f\(:or att rapportera fel\&.
+.SH "AUTHORS"
+.PP
+\fBScarlett Clark\fR <\&scarlett@scarlettgatelyclark\&.com\&>
+.RS 4
+Skrev originaldokumentationen\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Redigerade dokumentationen\&.
+.RE
+.SH "NOTER"
+.IP " 1." 4
+KDE:s felsp\(oarningssystem
+.RS 4
+\%https://bugs.kde.org
+.RE

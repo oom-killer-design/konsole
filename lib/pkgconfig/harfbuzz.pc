@@ -1,0 +1,6 @@
+Name: harfbuzz
+Description: HarfBuzz text shaping library
+Version: 2.7.2
+
+Libs: -LC:/CraftRoot/lib -lharfbuzz
+Cflags: -IC:/CraftRoot/include/harfbuzz

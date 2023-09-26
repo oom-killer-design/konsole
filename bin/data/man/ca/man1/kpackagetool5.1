@@ -1,0 +1,134 @@
+'\" t
+.\"     Title: \fBkpackagetool5\fR
+.\"    Author: [see the "Autors" section]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 3 de gener de 2017
+.\"    Manual: Gestor KPackage
+.\"    Source: Frameworks del KDE Frameworks 5.30
+.\"  Language: Catalan
+.\"
+.TH "\FBKPACKAGETOOL5\FR" "1" "3 de gener de 2017" "Frameworks del KDE Frameworks" "Gestor KPackage"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOM"
+kpackagetool5 \- Instal\(mdla, llista, suprimeix els paquets Plasma
+.SH "SINOPSI"
+.HP \w'\fBkpackagetool5\fR\ 'u
+\fBkpackagetool5\fR [\fB\-v, \-\-version\fR] [\fB\-h, \-\-help\fR] [\fB\-\-hash\fR\fI cam\('i\fR] [\fB\-g, \-\-global\fR] [\fB\-t, \-\-type\fR\fI tipus\fR] [\fB\-i, \-\-install\fR\fI cam\('i\fR] [\fB\-s, \-\-show\fR\fI nom\fR] [\fB\-u, \-\-upgrade\fR\fI cam\('i\fR] [\fB\-l, \-\-list\fR] [\fB\-\-list\-types\fR] [\fB\-r, \-\-remove\fR\fI nom\fR] [\fB\-p, \-\-packageroot\fR\fI cam\('i\fR] [\fB\-\-generate\-index\fR]
+.SH "DESCRIPCI\('O"
+.PP
+El
+\fBkpackagetool5\fR
+\('es una eina de la l\('inia d\*(Aqordres per a instal\(mdlar, llistar, suprimir els paquets del
+Plasma\&.
+.SH "OPCIONS"
+.PP
+\fB\-v, \-\-version\fR
+.RS 4
+Mostra informaci\('o sobre la versi\('o\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Mostra aquesta ajuda\&.
+.RE
+.PP
+\fB\-\-hash\fR \fI cam\('i\fR
+.RS 4
+Genera una suma de verificaci\('o SHA1 per al paquet al
+\(Focam\('i\(Fc\&.
+.RE
+.PP
+\fB\-g, \-\-global\fR
+.RS 4
+Per a instal\(mdlar o suprimir, opera amb els paquets instal\(mdlats per a tots els usuaris\&.
+.RE
+.PP
+\fB\-t, \-\-type\fR \fI tipus\fR
+.RS 4
+El tipus del paquet, el qual es correspon amb el tipus de servei del connector que es troba al paquet,
+p\&. ex\&., KPackage/Generic, Plasma/Theme, Plasma/Wallpaper, Plasma/Applet,
+etc\&.
+.RE
+.PP
+\fB\-i, \-\-install\fR \fI cam\('i\fR
+.RS 4
+Instal\(mdla el paquet al
+\(Focam\('i\(Fc\&.
+.RE
+.PP
+\fB\-s, \-\-show\fR \fI nom\fR
+.RS 4
+Mostra la informaci\('o del paquet
+\(Fonom\(Fc\&.
+.RE
+.PP
+\fB\-u, \-\-upgrade\fR \fI cam\('i\fR
+.RS 4
+Actualitza el paquet al
+\(Focam\('i\(Fc\&.
+.RE
+.PP
+\fB\-l, \-\-list\fR
+.RS 4
+Llista els paquets instal\(mdlats\&.
+.RE
+.PP
+\fB\-\-list\-types\fR
+.RS 4
+Llista tots els tipus de paquets coneguts que es poden instal\(mdlar\&.
+.RE
+.PP
+\fB\-r, \-\-remove\fR \fI nom\fR
+.RS 4
+Suprimeix el paquet anomenat
+\(Fonom\(Fc\&.
+.RE
+.PP
+\fB\-p, \-\-packageroot\fR \fI cam\('i\fR
+.RS 4
+Cam\('i absolut a l\*(Aqarrel del paquet\&. Si no es proporciona, llavors se cercaran els directoris de dades est\(`andard per a aquesta sessi\('o del
+Plasma\&.
+.RE
+.PP
+\fB\-\-generate\-index\fR \fI cam\('i\fR
+.RS 4
+Es torna a crear l\*(Aq\('index dels connectors\&. S\*(Aqutilitzar\(`a conjuntament amb les opcions
+\fB\-t\fR
+o
+\fB\-g\fR\&. Torna a crear l\*(Aq\('index per al tipus indicat o l\*(Aqarrel del paquet\&. Opera en el directori d\*(Aqusuari, excepte si s\*(Aqutilitza l\*(Aqopci\('o
+\fB\-g\fR\&.
+.RE
+.SH "VEGEU TAMB\('E"
+.PP
+Hi ha disponible documentaci\('o d\*(Aqusuari m\('es detallada des de
+\m[blue]\fBhelp:/plasma\-desktop\fR\m[]
+(podeu emprar aquest
+URL
+al
+Konqueror
+o b\('e executar
+\fB\fBkhelpcenter\fR\fR\fB \fR\fB\fIhelp:/plasma\-desktop\fR\fR)\&.
+.SH "AUTORS"
+.PP
+El
+\fBkpackagetool5\fR
+ha estat escrit per en
+Seigo, Aaron<aseigo@kde\&.org>\&.

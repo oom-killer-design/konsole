@@ -1,0 +1,163 @@
+'\" t
+.\"     Title: \fBmeinproc5\fR
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2014-05-08
+.\"    Manual: Gebruikershandleiding van meinproc5
+.\"    Source: KDE Frameworks Frameworks 5.0
+.\"  Language: Dutch
+.\"
+.TH "\FBMEINPROC5\FR" "1" "2014\-05\-08" "KDE Frameworks Frameworks 5.0" "Gebruikershandleiding van mein"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+meinproc5 \- KDE vertaler voor XML
+.SH "SAMENVATTING"
+.HP \w'\fBmeinproc5\fR\ 'u
+\fBmeinproc5\fR [\-h,\ \-\-help] [\-v,\ \-\-version] [\-\-cache\fI\ bestand\fR] [\-\-check] [\-\-srcdir\fI\ map\fR] [\-\-param\ \fIsleutelwoord\fR=\fIwaarde\fR] [[[\-o] | [\-\-output]]\fI bestand\fR] [\-\-stdout] [\-\-stylesheet\fI\ xsl\fR] docbook_bestand
+.SH "BESCHRIJVING"
+.PP
+\fBmeinproc5\fR
+converteert DocBook\-bestanden naar
+HTML\&.
+.SH "ALGEMENE OPTIES"
+.PP
+.PP
+\fB\-h\fR\fB\-\-help\fR
+.RS 4
+Hulp over de opties tonen\&.
+.RE
+.PP
+\fB\-v\fR\fB\-\-version\fR
+.RS 4
+Versie\-informatie tonen
+.RE
+.SH "PROGRAMMAOPTIES"
+.PP
+\fB\-\-cache\fR \fIbestand\fR
+.RS 4
+Bufferbestand aanmaken voor het document\&.
+.RE
+.PP
+\fB\-\-check\fR
+.RS 4
+Geldigheid van het document controleren\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+De uitvoer kan enigszins uitdagend zijn, omdat \('e\('en kleine fout een waterval van fouten kan veroorzaken\&. 
+De truc is om naar de eerste fout te kijken, die verbeteren, het bestand opslaan en \fBmeinproc5\fR opnieuw uitvoeren\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\fB\-o\fR, \fB\-\-output\fR\fI bestand\fR
+.RS 4
+Gehele document uitvoeren naar
+\fIbestand\fR\&.
+.RE
+.PP
+\fB\-\-stdout\fR
+.RS 4
+Gehele document uitvoeren naar stdout\&.
+.RE
+.PP
+\fB\-\-stylesheet\fR \fIxsl\fR
+.RS 4
+Te gebruiken stijlblad\&.
+.RE
+.PP
+\fB\-\-srcdir\fR \fImap\fR
+.RS 4
+Stel de hoofdmap in om te zoeken naar kdoctools\&.
+.RE
+.PP
+\fB\-\-param\fR key=waarde
+.RS 4
+Stel parameters in om door te geven aan het stijlblad\&.
+.RE
+.SH "GEBRUIK"
+.PP
+De meest gewone manier om
+\fBmeinproc5\fR
+uit te voeren is gewoon als
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \fR\fB\fIdocbook\-bestand\fR\fR\fB
+\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+waar
+\fIdocbook\-bestand\fR
+meestal index\&.docbook is\&. Dit commando maakt
+HTML\-pagina\*(Aqs aan uit het DocBook\-bestand\&. Opmerking: deze pagina\*(Aqs zijn alleen in te zien in de op
+KDE
+gebaseerde browsers (zoals
+Konqueror)\&.
+.PP
+Als u de
+HTML\-uitvoer in een andere browser wilt zien (bijvoorbeeld, als u het online zet), gebruik dan
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \-\-stylesheet \fR\fB\fIstylesheet\-naam\fR\fR\fB \fR\fB\fIdocbook\-bestand\fR\fR\fB
+\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+waar
+\fIstylesheet\-naam\fR
+het volledige pad is naar een van de
+XSL\-stijlbladen in <kdoctools_installatie_prefix>/share/kf5/kdoctools/customization/\&. Om uitvoer te maken dat geschikt is voor het web, kunt u het commando
+\fBkde\-web\&.xsl\fR
+of
+\fBkde\-chunk\-online\&.xsl\fR
+gebruiken\&. Zie het bestand
+README
+in die map voor meer details\&.
+.SH "ZIE OOK"
+.PP
+\fIkf5opties\fR(7),
+\fIqt5opties\fR(7)
+.SH "FOUTEN/BUGS"
+.PP
+Gebruik
+\m[blue]\fBDe volger van bugs van KDE\fR\m[]\&\s-2\u[1]\d\s+2
+om ze te rapporteren\&.
+.SH "OPMERKINGEN"
+.IP " 1." 4
+De volger van bugs van KDE
+.RS 4
+\%https://bugskde.org
+.RE

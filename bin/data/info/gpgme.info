@@ -1,0 +1,169 @@
+This is gpgme.info, produced by makeinfo version 6.5 from gpgme.texi.
+
+Copyright © 2002–2008, 2010, 2012–2018 g10 Code GmbH.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU General Public License as
+     published by the Free Software Foundation; either version 3 of the
+     License, or (at your option) any later version.  The text of the
+     license can be found in the section entitled “Copying”.
+
+   This document is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.
+INFO-DIR-SECTION GNU Libraries
+START-INFO-DIR-ENTRY
+* GPGME: (gpgme).          Adding support for cryptography to your program.
+END-INFO-DIR-ENTRY
+
+   This file documents the GPGME library.
+
+   This is Edition 1.21.0, last updated 21 June 2023, of ‘The ‘GnuPG
+Made Easy’ Reference Manual’, for Version 1.21.0.
+
+   Copyright © 2002–2008, 2010, 2012–2018 g10 Code GmbH.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU General Public License as
+     published by the Free Software Foundation; either version 3 of the
+     License, or (at your option) any later version.  The text of the
+     license can be found in the section entitled “Copying”.
+
+   This document is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details.
+
+
+Indirect:
+gpgme.info-1: 1670
+gpgme.info-2: 302724
+
+Tag Table:
+(Indirect)
+Node: Top1670
+Node: Introduction9031
+Node: Getting Started9821
+Node: Features11282
+Node: Overview12594
+Node: Preparation13703
+Node: Header14700
+Node: Building the Source15447
+Node: Largefile Support (LFS)17837
+Node: Using Automake23253
+Node: Using Libtool24827
+Node: Library Version Check25124
+Node: Signal Handling31583
+Node: Multi-Threading32853
+Ref: Multi-Threading-Footnote-134269
+Node: Protocols and Engines34692
+Node: Engine Version Check37443
+Node: Engine Information40492
+Node: Engine Configuration44352
+Node: OpenPGP45656
+Node: Cryptographic Message Syntax45996
+Node: Assuan46309
+Node: Algorithms46683
+Ref: Algorithms-Footnote-147162
+Node: Public Key Algorithms47290
+Node: Hash Algorithms49892
+Node: Error Handling51106
+Node: Error Values52980
+Node: Error Sources58183
+Node: Error Codes60623
+Node: Error Strings65644
+Node: Exchanging Data67451
+Node: Creating Data Buffers69336
+Node: Memory Based Data Buffers69852
+Node: File Based Data Buffers73285
+Node: Callback Based Data Buffers76398
+Node: Destroying Data Buffers80589
+Node: Manipulating Data Buffers82096
+Node: Data Buffer I/O Operations82588
+Node: Data Buffer Meta-Data84961
+Node: Data Buffer Convenience90540
+Node: Contexts92814
+Node: Creating Contexts93933
+Node: Destroying Contexts94780
+Node: Result Management95119
+Node: Context Attributes96700
+Node: Protocol Selection97867
+Node: Crypto Engine98913
+Node: Setting the Sender100802
+Node: ASCII Armor102315
+Node: Text Mode102944
+Node: Offline Mode103878
+Node: Pinentry Mode105376
+Node: Included Certificates107270
+Node: Key Listing Mode108716
+Node: Passphrase Callback114804
+Node: Progress Meter Callback118366
+Node: Status Message Callback120351
+Node: Context Flags122116
+Node: Locale129809
+Node: Additional Logs131401
+Node: Key Management133599
+Node: Key objects134823
+Node: Listing Keys149829
+Node: Information About Keys158482
+Node: Manipulating Keys159790
+Node: Generating Keys162296
+Node: Signing Keys180616
+Node: Exporting Keys186375
+Node: Importing Keys193964
+Ref: Importing Keys-Footnote-1202830
+Node: Deleting Keys202958
+Node: Changing Passphrases205238
+Node: Changing TOFU Data206565
+Node: Advanced Key Editing208673
+Node: Crypto Operations211406
+Node: Decrypt212663
+Node: Verify220745
+Node: Decrypt and Verify236004
+Node: Sign238859
+Node: Selecting Signers239423
+Node: Creating a Signature240829
+Node: Signature Notation Data246452
+Node: Encrypt248737
+Node: Encrypting a Plaintext249093
+Node: Miscellaneous264404
+Node: Running other Programs264816
+Node: Using the Assuan protocol266979
+Node: Checking for updates269777
+Node: Run Control274594
+Node: Waiting For Completion275338
+Node: Using External Event Loops277463
+Node: I/O Callback Interface279435
+Node: Registering I/O Callbacks284363
+Node: I/O Callback Example286402
+Node: I/O Callback Example GTK+293027
+Node: I/O Callback Example GDK294816
+Node: I/O Callback Example Qt296458
+Node: Cancellation298746
+Node: UI Server Protocol302724
+Ref: UI Server Protocol-Footnote-1304159
+Node: UI Server Encrypt304278
+Node: UI Server Sign309636
+Node: UI Server Decrypt311989
+Node: UI Server Verify313644
+Node: UI Server Set Input Files317216
+Node: UI Server Sign/Encrypt Files318286
+Node: UI Server Verify/Decrypt Files320094
+Node: UI Server Import/Export Keys321970
+Node: UI Server Checksum Files323032
+Node: Miscellaneous UI Server Commands325250
+Ref: command SENDER327181
+Node: Debugging328883
+Node: Deprecated Functions331042
+Node: Library Copying354051
+Node: Copying382271
+Node: Concept Index420021
+Node: Function and Data Index434733
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

@@ -1,0 +1,154 @@
+'\" t
+.\"     Title: \fBmeinproc5\fR
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 08/05/2014
+.\"    Manual: Manual do Usu\('ario do meinproc5
+.\"    Source: KDE Frameworks Frameworks 5.0
+.\"  Language: Portuguese (Brazil)
+.\"
+.TH "\FBMEINPROC5\FR" "1" "08/05/2014" "KDE Frameworks Frameworks 5.0" "Manual do Usu\('ario do meinproc5"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOME"
+meinproc5 \- Tradutor do KDE para XML
+.SH "SINTAXE"
+.HP \w'\fBmeinproc5\fR\ 'u
+\fBmeinproc5\fR [\-h,\ \-\-help] [\-v,\ \-\-version] [\-\-cache\fI\ arquivo\fR] [\-\-check] [\-\-srcdir\fI\ dir\fR] [\-\-param\ \fIchave\fR=\fIvalor\fR] [[[\-o] | [\-\-output]]\fI arquivo\fR] [\-\-stdout] [\-\-stylesheet\fI\ xsl\fR] arquivo\-docbook
+.SH "DESCRI\(,c\(~aO"
+.PP
+O
+\fBmeinproc5\fR
+converte arquivos DocBook para HTML\&.
+.SH "OP\(,c\(~oES GEN\('eRICAS"
+.PP
+.PP
+\fB\-h\fR\fB\-\-help\fR
+.RS 4
+Mostra a ajuda sobre as op\(,c\(~oes\&.
+.RE
+.PP
+\fB\-v\fR\fB\-\-version\fR
+.RS 4
+Mostra informa\(,c\(~oes sobre a vers\(~ao
+.RE
+.SH "OP\(,c\(~oES DO APLICATIVO"
+.PP
+\fB\-\-cache\fR \fIarquivo\fR
+.RS 4
+Cria um arquivo de cache para o documento
+.RE
+.PP
+\fB\-\-check\fR
+.RS 4
+Verifica a validade do documento
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+O resultado poder\('a ser bastante exaustivo, uma vez que um pequeno erro poder\('a gerar uma enorme cascata de erros\&. 
+O truque \('e olhar para o primeiro erro, corrigi\-lo, salvar o arquivo e executar o \fBmeinproc5\fR novamente\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\fB\-o\fR, \fB\-\-output\fR\fI arquivo\fR
+.RS 4
+Envia o documento inteiro para o
+\fIarquivo\fR\&.
+.RE
+.PP
+\fB\-\-stdout\fR
+.RS 4
+Envia todo o documento para o \*(Aqstdout\*(Aq (tela)\&.
+.RE
+.PP
+\fB\-\-stylesheet\fR \fIxsl\fR
+.RS 4
+Folha de estilo a ser usada
+.RE
+.PP
+\fB\-\-srcdir\fR \fIpasta\fR
+.RS 4
+Configura a pasta de topo onde procurar o kdoctools
+.RE
+.PP
+\fB\-\-param\fR chave=valor
+.RS 4
+Define os par\(^ametros a passar \(`a folha de estilo\&.
+.RE
+.SH "UTILIZA\(,c\(~aO"
+.PP
+A forma mais comum de executar o
+\fBmeinproc5\fR
+\('e t\(~ao simples como
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \fR\fB\fIarquivo\-docbook\fR\fR\fB
+\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+, onde o
+\fIarquivo\-docbook\fR
+\('e normalmente \*(Aqindex\&.docbook\*(Aq\&. Este comando cria p\('aginas HTML a partir do arquivo DocBook\&. Lembre\-se de que estas p\('aginas s\('o s\(~ao vis\('iveis em navegadores baseados no KDE (como o Konqueror)\&.
+.PP
+Se voc\(^e precisar ver o resultado em HTML em outro navegador (por exemplo, se quiser coloc\('a\-lo online), use
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \-\-stylesheet \fR\fB\fInome\-folha\-estilo\fR\fR\fB \fR\fB\fIarquivo\-docbook\fR\fR\fB
+\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+, onde o
+\fInome\-folha\-estilo\fR
+\('e a localiza\(,c\(~ao completa de uma das folhas de estilo em <kdoctools_installation_prefix>/share/kf5/kdoctools/customization/\&. Para produzir um resultado adequado para a Web, voc\(^e poder\('a usar o
+\fBkde\-web\&.xsl\fR
+ou o
+\fBkde\-chunk\-online\&.xsl\fR\&. Veja o arquivo README dessa pasta para mais detalhes\&.
+.SH "VEJA TAMB\('eM"
+.PP
+\fIkf5options\fR(7),
+\fIqt5options\fR(7)
+.SH "ERROS"
+.PP
+Use o
+\m[blue]\fBsistema de gerenciamento de erros do KDE\fR\m[]\&\s-2\u[1]\d\s+2
+para relatar erros\&.
+.SH "NOTAS"
+.IP " 1." 4
+sistema de gerenciamento de erros do KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

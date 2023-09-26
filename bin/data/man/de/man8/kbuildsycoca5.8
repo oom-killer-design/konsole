@@ -1,0 +1,143 @@
+'\" t
+.\"     Title: \fBkbuildsycoca5\fR
+.\"    Author: Darian Lanx <content@openprojects.net>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2015-09-17
+.\"    Manual: KDE Frameworks: KService
+.\"    Source: KDE Frameworks Frameworks 5.15
+.\"  Language: German
+.\"
+.TH "\FBKBUILDSYCOCA5\FR" "8" "2015\-09\-17" "KDE Frameworks Frameworks 5.15" "KDE Frameworks: KService"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+kbuildsycoca5 \- Erstellt den Zwischenspeicher f\(:ur die Systemeinstellungen der KService\-Desktop\-Dateien neu
+.SH "\(:UBERSICHT"
+.HP \w'\fBkbuildsycoca5\fR\ 'u
+\fBkbuildsycoca5\fR [\fIOptionen\fR...]
+.SH "BESCHREIBUNG"
+.PP
+\fBkbuildsycoca5\fR
+erstellt den bin\(:aren Zwischenspeicher der in Dateien mit der Erweiterung
+\&.desktop,
+\&.directory
+und dem
+MIME\-Typdateien mit der Erweiterung
+\&.xml, den das KService\-Framework benutzt, um Module, Programme und andere Dienste zu finden\&.
+.PP
+Die Bibliothek KService benutzt diese Datenbank, um die angefragten Informationen effektiv bereit zustellen\&.
+.PP
+Benutzer m\(:ussen dieses Programm normalerweise nicht direkt ausf\(:uhren\&. Es wird von KService ausgef\(:uhrt, wenn es n\(:otig ist, weil eine der zwischengespeicherten Daten ge\(:andert wurde\&.
+.SH "OPTIONEN"
+.PP
+\fB\-\-global\fR
+.RS 4
+Ignoriert alle benutzerdefinierten Dateien (in
+\fIXDG_DATA_HOME\fR)\&. Dies wird zurzeit nur in
+UNIX\(rg\-Systemen unterst\(:utzt\&.
+.RE
+.PP
+\fB\-\-noincremental\fR
+.RS 4
+Anstatt den vorhandenen Zwischenspeicher zu verwenden und nur die ge\(:anderten oder hinzugef\(:ugten Informationen zu aktualisieren, wird der Zwischenspeicher vollst\(:andig neu erstellt\&. Diese Option wird ignoriert, wenn
+\fB\-\-global\fR
+verwendet wird\&.
+.RE
+.PP
+\fB\-\-nosignal\fR
+.RS 4
+Normalerweise sendet
+\fBkbuildsycoca5\fR
+bei der Aktualisierung des Zwischenspeichers ein Signal \(:uber
+D\-Bus
+an alle Anwendungen, die KService verwenden, damit die Anwendungen immer mit den neuesten Informationen arbeiten\&. Mit dieser Option wird dieses Verhalten abgeschaltet\&.
+.RE
+.PP
+\fB\-\-menutest\fR
+.RS 4
+Testet die Erstellung der Datenbank f\(:ur das Startmen\(:u\&. Der Zwischenspeicher wird nicht neu generiert\&.
+.RE
+.PP
+\fB\-\-testmode\fR
+.RS 4
+Verwendet den Testmodus f\(:ur QStandardPaths, um Kollisionen mit Benutzerdaten zu verhindern\&. Dies sollte f\(:ur Unit\-Test verwendet werden\&.
+.RE
+.PP
+\fB\-\-track \fR\fB\fImenu\-id\fR\fR
+.RS 4
+Men\(:u\-Kennung (ID) f\(:ur Fehlersuche zur\(:uckverfolgen\&.
+.RE
+.PP
+\fB\-\-author\fR
+.RS 4
+Zeigt Informationen \(:uber den Autor\&.
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+Zeigt Lizenz\-Informationen an\&.
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+Zeigt einen kurzen Hilfetext\&.
+.RE
+.PP
+\fB\-v , \-\-version\fR
+.RS 4
+Zeigt Versionsinformation an\&.
+.RE
+.SH "DATEIEN"
+.PP
+\fIcachedir\fR/ksycoca5_[lang]_[sha1\-of\-dirs]
+.RS 4
+Der KService\-Zwischenspeicher, der durch
+\fBkbuildsycoca5\fR
+erstellt wurde\&. In
+UNIX\(rg\-Systemen ist
+\fIcachedir\fR
+normalerweise
+\fBXDG_CACHE_HOME\fR
+.RE
+.SH "SIEHE AUCH"
+.PP
+\fBkded5\fR(8),
+\fBkdeinit5\fR(8)
+.SH "FEHLER"
+.PP
+Bitte berichten Sie Fehler im
+\m[blue]\fBFehlerverfolgungssystem von KDE\fR\m[]\&\s-2\u[1]\d\s+2\&.
+.SH "AUTOREN"
+.PP
+\fBDarian Lanx\fR <\&content@openprojects\&.net\&>
+.RS 4
+Schrieb die urspr\(:ungliche Dokumentation\&.
+.RE
+.PP
+\fBAlex Merry\fR <\&alexmerry@kde\&.org\&>
+.RS 4
+Aktualisierung der Dokumentation f\(:ur KDE Frameworks 5\&.
+.RE
+.SH "FU\(ssNOTEN"
+.IP " 1." 4
+Fehlerverfolgungssystem von KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

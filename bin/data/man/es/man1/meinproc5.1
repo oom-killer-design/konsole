@@ -1,0 +1,165 @@
+'\" t
+.\"     Title: \fBmeinproc5\fR
+.\"    Author: [FIXME: author] [see http://docbook.sf.net/el/author]
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2014-05-08
+.\"    Manual: Manual del usuario de meinproc5
+.\"    Source: KDE Frameworks Frameworks 5.0
+.\"  Language: Spanish
+.\"
+.TH "\FBMEINPROC5\FR" "1" "2014\-05\-08" "KDE Frameworks Frameworks 5.0" "Manual del usuario de meinproc"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOMBRE"
+meinproc5 \- Traductor de XML para KDE
+.SH "RESUMEN"
+.HP \w'\fBmeinproc5\fR\ 'u
+\fBmeinproc5\fR [\-h,\ \-\-help] [\-v,\ \-\-version] [\-\-cache\fI\ archivo\fR] [\-\-check] [\-\-srcdir\fI\ directorio\fR] [\-\-param\ \fIclave\fR=\fIvalor\fR] [[[\-o] | [\-\-output]]\fI archivo\fR] [\-\-stdout] [\-\-stylesheet\fI\ xsl\fR] docbook_file
+.SH "DESCRIPCI\('ON"
+.PP
+\fBmeinproc5\fR
+convierte archivos DocBook a
+HTML\&.
+.SH "OPCIONES GEN\('ERICAS"
+.PP
+.PP
+\fB\-h\fR\fB\-\-help\fR
+.RS 4
+Muestra ayuda sobre las opciones\&.
+.RE
+.PP
+\fB\-v\fR\fB\-\-version\fR
+.RS 4
+Muestra informaci\('on de la versi\('on\&.
+.RE
+.SH "OPCIONES DE LA APLICACI\('ON"
+.PP
+\fB\-\-cache\fR \fIfile\fR
+.RS 4
+Crea un archivo de cach\('e para el documento\&.
+.RE
+.PP
+\fB\-\-check\fR
+.RS 4
+Comprueba la validez de la documentaci\('on\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+La salida puede ser un poco desalentadora, ya que una peque\(~na equivocaci\('on puede causar una cascada de errores\&. 
+El truco es buscar el primer error, corregirlo, guardar el archivo y ejecutar \fBmeinproc5\fR de nuevo\&.
+.fi
+.if n \{\
+.RE
+.\}
+.RE
+.PP
+\fB\-o\fR, \fB\-\-output\fR\fI file\fR
+.RS 4
+Vuelca el documento completo a
+\fIfile\fR\&.
+.RE
+.PP
+\fB\-\-stdout\fR
+.RS 4
+Vuelca el documento completo a stdout\&.
+.RE
+.PP
+\fB\-\-stylesheet\fR \fIxsl\fR
+.RS 4
+Hoja de estilos a usar\&.
+.RE
+.PP
+\fB\-\-srcdir\fR \fIdir\fR
+.RS 4
+Ajusta el directorio ra\('iz para la b\('usqueda de kdoctools\&.
+.RE
+.PP
+\fB\-\-param\fR key=value
+.RS 4
+Ajusta los par\('ametros que se pasan a la hoja de estilo\&.
+.RE
+.SH "UTILIZACI\('ON"
+.PP
+El modo mas habitual de ejecutar
+\fBmeinproc5\fR
+es sencillamente como
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \fR\fB\fIdocbook\-file\fR\fR\fB
+\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+donde
+\fIdocbook\-file\fR
+es, generalmente index\&.docbook\&. Esta orden genera p\('aginas
+HTML
+a partir del archivo DocBook\&. Estas p\('aginas solo son visibles en navegadores basados en
+KDE
+(como
+Konqueror)\&.
+.PP
+Si necesita ver la salida
+HTML
+en otro navegador (por ejemplo, si la est\('a haciendo disponible con conexi\('on), utilice
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fB\fBmeinproc5\fR\fR\fB \-\-stylesheet \fR\fB\fIstylesheet\-name\fR\fR\fB \fR\fB\fIdocbook\-file\fR\fR\fB
+\fR
+.fi
+.if n \{\
+.RE
+.\}
+.sp
+donde
+\fIstylesheet\-name\fR
+es la ruta completa a una de las hojas de estilo
+XSL
+en <kdoctools_installation_prefix>/share/kf5/kdoctools/customization/\&. Para generar salida adecuada para la web, puede emplear
+\fBkde\-web\&.xsl\fR
+o
+\fBkde\-chunk\-online\&.xsl\fR\&. Consulte el archivo
+README
+situado en este directorio para obtener m\('as informaci\('on\&.
+.SH "VEA TAMBI\('EN"
+.PP
+\fIkf5options\fR(7),
+\fIqt5options\fR(7)
+.SH "FALLOS"
+.PP
+Por favor, use
+\m[blue]\fBel sistema de seguimiento de fallos de KDE\fR\m[]\&\s-2\u[1]\d\s+2
+para informar de fallos\&.
+.SH "NOTAS"
+.IP " 1." 4
+el sistema de seguimiento de fallos de KDE
+.RS 4
+\%https://bugs.kde.org
+.RE

@@ -1,0 +1,16 @@
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=C:/CraftRoot/lib
+host=x86_64-w64-mingw32
+api_version=1
+
+Name: ntbtls
+Description: The Not Too Bad TLS Library
+Requires: gpg-error
+Requires.private: ksba, libgcrypt
+Version: 0.3.1-unknown
+Cflags: -I${includedir} 
+Libs: -L${libdir} -lntbtls
+Libs.private:  -lws2_32
+URL: https://www.gnupg.org/software/ntbtls/index.html

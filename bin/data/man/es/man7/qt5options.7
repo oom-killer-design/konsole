@@ -1,0 +1,191 @@
+'\" t
+.\"     Title: qt5options
+.\"    Author: Lauri Watts <lauri@kde.org>
+.\" Generator: DocBook XSL Stylesheets v1.78.1 <http://docbook.sf.net/>
+.\"      Date: 2016-06-04
+.\"    Manual: Documentaci\('on de Qt para la l\('inea de \('ordenes
+.\"    Source: KDE Frameworks Qt 5.4
+.\"  Language: Spanish
+.\"
+.TH "QT5OPTIONS" "7" "2016\-06\-04" "KDE Frameworks Qt 5.4" "Documentaci\('on de Qt para la l\('i"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NOMBRE"
+qt5options \- Opciones comunes de la l\('inea de \('ordenes para todas las aplicaciones basadas en el conjunto de herramientas Qt(TM)
+.SH "SINOPSIS"
+.HP \w'\fB\fIAplicaci\('on\ Qt\fR\fR\ 'u
+\fB\fIAplicaci\('on Qt\fR\fR [\fB\-style=\fR\ \fIestilo\fR\ /\ \fB\-style\fR\ \fIestilo\fR] [\fB\-stylesheet=\fR\ \fIhoja\ de\ estilos\fR\ /\ \fB\-stylesheet\fR\ \fIhoja\ de\ estilos\fR] [\fB\-widgetcount\fR] [\fB\-reverse\fR] [\fB\-qmljsdebugger=\fR\ \fIpuerto\fR] [\fB\-platform\fR\ \fIplataforma[:opciones]\fR] [\fB\-platformpluginpath\fR\ \fIruta\fR] [\fB\-platformtheme\fR\ \fItema\ de\ la\ plataforma\fR] [\fB\-plugin\fR\ \fIcomplemento\fR] [\fB\-qwindowgeometry\fR\ \fIgeometr\('ia\fR] [\fB\-qwindowicon\fR\ \fIicono\fR] [\fB\-qwindowtitle\fR\ \fIt\('itulo\fR] [\fB\-reverse\fR] [\fB\-session\fR\ \fIsesi\('on\fR] [\fB\-display\fR\ \fIm\('aquina:pantalla\fR] [\fB\-geometry\fR\ \fIgeometr\('ia\fR] [\fB\-dialogs=\fR\ \fI[xp|none]\fR] [\fB\-fontengine=\fR\ \fIfreetype\fR] [\fB\-h,\ \-\-help\ y\ \-?\ en\ \fR\fBWindows\(rg\fR] [\fB\-v\ \-\-version\fR]
+.SH "OPCIONES"
+.PP
+Las siguientes opciones se aplican a todas las aplicaciones
+Qt(TM):
+.PP
+\fB\-style=\fR \fIestilo\fR / \fB\-style\fR \fIestilo\fR
+.RS 4
+Define el estilo de la interfaz gr\('afica de la aplicaci\('on\&. Los valores posibles dependen de la configuraci\('on del sistema\&. Si
+Qt(TM)
+se ha compilado con estilos adicionales o si posee estilos adicionales como complementos, estar\('an disponibles para la opci\('on
+\fB\-style\fR
+de la l\('inea de \('ordenes\&.
+.RE
+.PP
+\fB\-stylesheet=\fR \fIhoja de estilos\fR / \fB\-stylesheet\fR \fIhoja de estilos\fR
+.RS 4
+Define la hoja de estilos de la aplicaci\('on\&. El valor debe ser la ruta a un archivo que contiene la hoja de estilos\&.
+.RE
+.PP
+\fB\-widgetcount\fR
+.RS 4
+Muestra el mensaje de depuraci\('on al final sobre el n\('umero de elementos gr\('aficos que han quedado sin destruir y el n\('umero m\('aximo de elementos gr\('aficos que han existido al mismo tiempo\&.
+.RE
+.PP
+\fB\-reverse\fR
+.RS 4
+Define la direcci\('on de disposici\('on de la aplicaci\('on a
+Qt::RightToLeft\&. Esta opci\('on est\('a pensada para ayudar en la depuraci\('on y no deber\('ia usarse en producci\('on\&. El valor predeterminado se detecta autom\('aticamente a partir de la configuraci\('on local del usuario (consulte tambi\('en
+QLocale::textDirection())\&.
+.RE
+.PP
+\fB\-qmljsdebugger=\fR \fIpuerto\fR
+.RS 4
+Activa el depurador QML/JS con el puerto indicado\&. El valor debe estar en el formato de puertos: 1234[,bloque], donde \(Fobloque\(Fc es opcional y no har\('a que la aplicaci\('on espere hasta que un depurador se conecte a ella\&.
+.RE
+.PP
+\fB\-platform\fR \fIplataforma[:opciones]\fR
+.RS 4
+Indica el complemento de abstracci\('on de plataforma
+Qt(TM)
+(QPA)\&.
+.RE
+.PP
+\fB\-platformpluginpath\fR \fIruta\fR
+.RS 4
+Indica la ruta a los complementos de la plataforma\&.
+.RE
+.PP
+\fB\-platformtheme\fR \fItema de la plataforma\fR
+.RS 4
+Define el tema de la plataforma\&.
+.RE
+.PP
+\fB\-plugin\fR \fIcomplemento\fR
+.RS 4
+Indica complementos adicionales a cargar\&. El argumento puede aparecer varias veces\&.
+.RE
+.PP
+\fB\-qwindowgeometry\fR \fIgeometr\('ia\fR
+.RS 4
+Indica la geometr\('ia de la ventana principal usando la sintaxis de
+X11\&. Por ejemplo: \-qwindowgeometry 100x100+50+50
+.RE
+.PP
+\fB\-qwindowicon\fR \fIicono\fR
+.RS 4
+Define el icono predeterminado de la ventana\&.
+.RE
+.PP
+\fB\-qwindowtitle\fR \fIt\('itulo\fR
+.RS 4
+Define el t\('itulo de la primera ventana\&.
+.RE
+.PP
+\fB\-session\fR \fIsesi\('on\fR
+.RS 4
+Restaura la aplicaci\('on desde una sesi\('on anterior\&.
+.RE
+.PP
+\fB\-display\fR \fIm\('aquina:pantalla\fR
+.RS 4
+Cambia las pantallas en
+X11\&. Tiene preferencia sobre la variable de entorno
+\fBDISPLAY\fR\&.
+.RE
+.PP
+\fB\-geometry\fR \fIgeometr\('ia\fR
+.RS 4
+Indica la geometr\('ia de la ventana principal en
+X11\&. Por ejemplo: \-geometry 100x100+50+50
+.RE
+.PP
+\fB\-dialogs=\fR \fI[xp|none]\fR
+.RS 4
+Disponible solo para la plataforma
+Windows\(rg\&. \(Foxp\(Fc usa di\('alogos de estilo nativos; \(Fonone\(Fc los desactiva\&.
+.RE
+.PP
+\fB\-fontengine=\fR \fIfreetype\fR
+.RS 4
+Usa el motor de tipos de letra FreeType\&.
+.RE
+.PP
+\fB\-h, \-\-help y \-? en \fR\fBWindows\(rg\fR
+.RS 4
+Muestra todas las opciones y la descripci\('on de la aplicaci\('on\&.
+.RE
+.PP
+\fB\-v \-\-version\fR
+.RS 4
+Muestra el texto de la versi\('on de la aplicaci\('on\&.
+.RE
+.SH "VEA TAMBI\('EN"
+.PP
+\fIkf5options\fR(7)
+.SH "AUTORES"
+.PP
+P\('agina de manual escrita originalmente por
+Lauri Watts<lauri@kde\&.org>
+.PP
+Actualizada a
+Frameworks
+5 por
+Burkhard L\(:uck<lueck@hube\-lueck\&.de>
+.PP
+Los archivos \(Foinfo\(Fc para esta p\('agina \(Foman\(Fc son de la
+\m[blue]\fBdocumentaci\('on de QApplication\fR\m[]\&\s-2\u[1]\d\s+2, la
+\m[blue]\fBdocumentaci\('on de QGuiApplication\fR\m[]\&\s-2\u[2]\d\s+2
+y la
+\m[blue]\fBdocumentaci\('on de QCommandLineParser\fR\m[]\&\s-2\u[3]\d\s+2\&.
+.SH "AUTORES"
+.PP
+\fBLauri Watts\fR <\&lauri@kde\&.org\&>
+.RS 4
+Autor.
+.RE
+.PP
+\fBBurkhard L\(:uck\fR <\&lueck@hube\-lueck\&.de\&>
+.RS 4
+Autor.
+.RE
+.SH "NOTAS"
+.IP " 1." 4
+documentaci\('on de QApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qapplication.html#QApplication
+.RE
+.IP " 2." 4
+documentaci\('on de QGuiApplication
+.RS 4
+\%https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication
+.RE
+.IP " 3." 4
+documentaci\('on de QCommandLineParser
+.RS 4
+\%https://doc.qt.io/qt-5/qcommandlineparser.html
+.RE

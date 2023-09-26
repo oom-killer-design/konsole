@@ -1,0 +1,14 @@
+prefix=C:/CraftRoot
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt5
+
+
+Name: Qt5 UiTools
+Description: Qt UiTools module
+Version: 5.15.10
+Libs: -L${libdir} -lQt5UiTools 
+Libs.private: -LC:\CraftRoot\lib C:\CraftRoot\lib\libQt5Widgets.a C:\CraftRoot\lib\libQt5Gui.a C:\CraftRoot\lib\libQt5Core.a C:\CraftRoot\lib\libQt5Widgets.a C:\CraftRoot\lib\libQt5Gui.a C:\CraftRoot\lib\libQt5Core.a   
+Cflags: -DQT_UITOOLS_LIB -I${includedir}/QtUiTools -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+
